@@ -1,0 +1,47 @@
+/**
+ * Site buttons styling.
+ */
+
+.button {
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+    vertical-align: middle;
+    padding: 22px 34px;
+ 
+    transition: background-color ease 0.15s, color ease 0.15s;
+    font-family: @alt-font;
+    font-weight:300; 
+    color:@white;
+    background:#415363;
+    font-size:20px;
+
+    // Speed up button taps on mobile.
+    touch-action: manipulation;
+    // User can't select buttons.
+    user-select: none;
+
+    @media @breakpoint-medium {
+        // Stop button content wrapping on desktop devices.
+        white-space: nowrap;
+    }
+    &.full {max-width:100%;}
+    // Button variations.
+    &.button-primary {
+        color: @white;
+        background-color: @primary;
+
+        &:hover {
+            background-color: darken(@primary, 10);
+        }
+    }
+
+    svg {
+        margin-left: 5px;
+
+        @media @breakpoint-medium {
+            margin-left: 15px;
+        }
+    }
+}

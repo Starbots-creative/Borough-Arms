@@ -1,0 +1,61 @@
+/**
+ * Site typography styling.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @heading-font;
+    margin: 0;
+}
+h1 {
+    color: @black;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.2;
+
+    @media @breakpoint-medium {
+        font-size: 54px;
+        line-height: 1.1;
+    }
+}
+h2 {
+    color: @text;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 1.2;
+    font-family: 'Rooney-Medium';
+
+    @media @breakpoint-medium {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+}
+h3 {
+    font-size: 30px;
+    line-height: 1.3;
+    font-family: 'Rooney-Medium';
+    font-weight: normal;
+}
+h4 {
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: 'Rooney-Medium';
+}
+h5 {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Rooney-Medium';
+}
+h6 {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Rooney-Medium';
+}
+
+p {
+    margin-bottom:@trim;
+}
+
+a {
+    text-decoration: none;
+    color: @text;
+}

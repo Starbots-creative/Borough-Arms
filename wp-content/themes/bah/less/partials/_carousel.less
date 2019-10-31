@@ -1,0 +1,100 @@
+.slider-wrapper {
+
+    .main-slider  {
+
+        .slide {
+        
+            height:100vh;
+            background-size:cover;
+            background-repeat: no-repeat fixed;
+            background-position: 50% 50%;
+
+            .content {
+                max-width: @small-container-width;
+                margin:0 auto;
+                padding:275px @trim 0 @trim;
+
+                h1 {font-family: 'Rooney-light'; color:@white;}
+            }
+        
+        }
+
+
+        .owl-nav { 
+            max-width: @container-width;
+            position:relative;
+            z-index:11;
+            margin:0 auto;
+            [class*="owl-"]:hover {
+                background: none !important;
+                color: #FFF;
+        
+            }
+        
+            .owl-prev {
+            left:0px;
+            top:-300px; 
+            position:absolute;
+            width:100px;
+            }   
+            .owl-next {
+                right:0px;
+                left:auto;
+                top:-300px; 
+                position:absolute;
+                width:100px;
+        
+            }
+        
+        }
+
+        .owl-dots {
+            position:absolute;   
+            transform: translate(-50%, -50px;); 
+            left: 50%; z-index:11;  
+            text-align:center;   
+            max-width: @small-container-width; 
+            
+            span {
+                width:16px;
+                height:16px;
+                color:@white;
+            }
+
+            &.active {
+                span {
+                    background:@pink !important;
+                }
+            }
+        }
+
+    }
+
+    
+    .cta {
+        background:@pink;
+        padding:30px;
+        max-width:100%;
+        margin:0 auto;
+        text-align:center;
+        p {
+            color:@white;
+            text-transform: uppercase;
+            font-size:24px;
+            &::before,
+            &::after {
+              display: inline-block;
+              content: "";
+              border-top: 2px solid @white;
+              width: 20px; 
+              margin: 0 1rem;
+              transform: translateY(-0.75rem);
+
+               @media @breakpoint-large { 
+                width: 75px; 
+                margin: 0 3rem;
+                }
+            }
+        }
+    }
+}

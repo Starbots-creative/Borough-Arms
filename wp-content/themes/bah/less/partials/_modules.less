@@ -1,0 +1,201 @@
+/*reusable modules*/
+.generic {
+    background:@light-grey;
+    text-align:center;
+    padding:90px 0;
+
+    .inner {
+        .wrapper();
+        h2 {color:@camo; .heading_underline();}
+        .button {margin-top:@trim;
+            
+            @media @breakpoint-large { 
+                max-width:800px;
+            }
+        
+        }
+    }
+}    
+
+
+/*Arcticle Summary*/
+.articles {
+    margin:50px 0;
+    .article {
+        text-align:center;
+        @media @breakpoint-large { 
+            text-align:left;
+            display:flex;
+          .wrapper();
+          margin-top:100px;
+        
+        }
+
+        img {
+            flex-basis: 100%;
+
+        }
+        .content {
+            padding-top:50px;
+            h2 { .heading_underline_small(); border-bottom:1px solid @rouge; color:@rouge;}
+            .button {background-color: @rouge;}
+
+            @media @breakpoint-large { 
+                flex-basis: 100%;
+                margin-left:50px;
+            }
+     
+        }
+
+           
+        &:nth-child(even) {
+            @media @breakpoint-large {  
+                .content {
+                order:-1;
+                margin-right:50px;
+                margin-left:0px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*hero & events*/
+.hero {
+    height:100vh;
+    background-size:cover;
+    background-repeat: no-repeat fixed;
+    background-position: 50% 50%;
+    background:none;
+    display:flex;
+    .content {
+        text-align:center;
+        .wrapper();
+         background:rgba(255,255,255,0.9);
+         padding:50px;
+         h2 {.heading_underline(); }
+         .action {
+             display:flex;
+             flex-wrap: wrap;
+
+             @media @breakpoint-large {  
+                flex-wrap: nowrap;
+             }
+
+            .button {
+                flex-basis: 100%;
+                margin-top:5px;
+            }
+             @media @breakpoint-large {  
+                .button {
+                    flex-basis: 49%;
+                    margin-right:1%;
+                }
+             }
+        }
+    }
+}
+
+/*voucher & hero*/
+.voucher {
+    display:flex;
+    background-repeat: repeat;
+   
+
+    @media @breakpoint-large { 
+       
+    }
+    .carousel {
+        position:relative;
+        overflow:hidden;
+        .bg-image;
+        position:relative;
+        flex-basis: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center; 
+        text-align:center;
+       
+        
+        
+        &:before {
+            .gradient();
+            @media @breakpoint-large { 
+                background: @green-dark !important; 
+            }
+        } 
+
+        @media @breakpoint-large { 
+            max-height:600px;
+        }
+        
+ 
+        .slider {
+            max-width:500px;
+            .slide {
+                padding-left:@trim*2;
+                padding-right:@trim*2;
+                h3 {
+                    color:@white;
+                    font-size:40px;
+                
+                }
+                p {
+                    color:@white;
+                    font-family: 'Rooney-light';
+                }
+            }
+
+            .owl-nav { 
+                max-width: @container-width;
+                position:relative;
+           
+         
+                z-index:11;
+                margin:0 auto;
+                [class*="owl-"]:hover {
+                    background: none !important;
+                    color: #FFF;
+            
+                }
+            
+                .owl-prev {
+                left:-50px;
+                top:-100px;
+                position:absolute;
+                width:100px;
+                }   
+                .owl-next {
+                    right:-50px;
+                    left:auto; 
+                    top:-100px;
+                    position:absolute;
+                    width:100px;
+            
+                }
+            
+            }
+        }
+        
+    
+    }
+
+    .sideimage {
+        
+ 
+            display:none;
+           
+            @media @breakpoint-large { 
+             flex-basis: 100%;
+             display:block;
+            .bg-image;
+             max-height:600px;
+           
+            }
+        }
+
+}
+
+

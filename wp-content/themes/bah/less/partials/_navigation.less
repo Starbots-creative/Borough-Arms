@@ -1,0 +1,52 @@
+ .main-menu {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    
+   
+
+        @media @breakpoint-large {
+            display:flex;
+            justify-content: space-between;
+            margin-top:-50px;
+            border-bottom:2px solid @white;
+        }
+
+        li {
+            a {
+                display: inline-block;
+                 color:@white;
+                 text-transform: uppercase;  
+                 font-family: @alt-font; 
+
+                @media @breakpoint-large {
+                    display: block;
+                    padding:20px 35px 45px 35px;
+        
+                }
+            }
+            @media @breakpoint-large {
+                    &:nth-child(4n) {
+                        margin-left:auto;
+                    }
+
+                    &:first-child {
+                        a {
+                            padding-left:0;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            padding-right:0;
+                        }
+                    }
+
+             }
+
+             
+        }
+    }
+ }

@@ -1,0 +1,157 @@
+// Ninja Forms - default overrides.
+.nf-form-cont {
+    margin-top:50px;
+    .nf-form-title {
+        display: none;
+    }
+    .nf-form-wrap {
+        .nf-debug-msg,
+        .nf-before-form,
+        .nf-after-form {
+            display: none;
+        }
+        @media @breakpoint-medium { 
+
+                nf-fields-wrap {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                  
+                    justify-content: space-evenly;
+                    
+                    nf-field:first-child {
+                        width:33%;
+                    }  
+                    nf-field:nth-child(2) {
+                        width:33%; 
+                    }         
+                    
+                }
+        }
+
+        .nf-form-layout {
+            .nf-before-form-content {
+                display: none;
+            }
+            .nf-form-content {
+                .nf-field-container {
+                    &.checkbox-container {
+                        .nf-field {
+                            .field-wrap {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-evenly;
+                                
+
+                                .nf-field-label {
+                                    display: block;
+                                    line-height: 1.25;
+                                    padding: 0;
+                                    margin: 0;
+
+                                    label {
+                                        font-size: 16px;
+                                        font-weight: 300;
+                                        line-height: 1.25;
+                                    }
+                                }
+                                .nf-field-element {
+                                    margin-right: 10px;
+                                    width:100%;
+
+                                    input {
+                                        padding: 0 !important;
+                                    }
+                                }
+                            }
+                        }
+                        .nf-after-field {
+                            width: 100%;
+
+                            .nf-error-msg {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    &.recaptcha-container {
+                        .nf-field-label {
+                            display: none;
+                        }
+                        .g-recaptcha > div {
+                            margin: auto;
+                        }
+                    }
+                    &.submit-container {
+                        .nf-field {
+                            .field-wrap {
+                                .nf-field-element {
+                                    text-align: center;
+
+                                    input {
+                                        .button;
+                                        background: @pink;
+                                        border: none;
+                                        padding: 15px 60px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .nf-field {
+                        .nf-field-label {
+                            margin-bottom: 5px;
+
+                            label {
+                                font-size: 16px;
+                                font-weight: 300;
+
+                                .ninja-forms-req-symbol {
+                                    color: #cc0000;
+                                }
+                            }
+                        }
+                        .nf-field-element {
+                            input, select, textarea {
+                                background-color: transparent;
+                                padding:  25px;
+                                border: none;
+                                background: @fieldbg;
+                           
+
+                        
+                            }
+                            textarea {
+                                resize: none;
+                            }
+                        }
+                    }
+
+                    .nf-before-field {
+                        display: none;
+                    }
+                    .nf-after-field {
+                        .nf-input-limit {
+                            display: none;
+                        }
+                        .nf-error-msg {
+                            color: #cc0000;
+                            font-size: 12px;
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .nf-after-form-content {
+                .nf-error-msg {
+                    color: #cc0000;
+                    font-size: 16px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

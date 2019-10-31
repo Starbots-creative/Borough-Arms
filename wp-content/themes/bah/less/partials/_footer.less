@@ -1,0 +1,56 @@
+.signup {
+    h2 {color:@pink;}
+    .wrapper;
+    text-align:center;
+    padding:70px 0 100px;
+}
+
+
+footer {
+    border-top:10px solid @pink;
+    padding:100px 0;
+    .inner {
+        .wrapper;
+        display: grid;
+        justify-content: center;
+        @media @breakpoint-large { 
+           
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .contact {
+            text-align:center;
+            @media @breakpoint-large { 
+                text-align:left;
+            }
+
+        }
+        .sublinks {
+            text-align:center;
+
+            @media @breakpoint-large { 
+                text-align:right;
+            }
+        }
+
+        .logo-wrapper {
+            text-align:center;
+            order:-1;
+            @media @breakpoint-large { 
+                order:0;
+            }  
+            .logo {
+                width:150px;
+                display:inline-block
+            }
+           
+        }
+        .copyright {
+            @media @breakpoint-large { 
+                grid-column: 2 / span 
+                width:33%;
+                text-align:center;
+            }
+        }
+    }
+}
