@@ -1407,8 +1407,9 @@ footer .inner .logo-wrapper .logo {
 }
 @media only screen and (min-width: 992px) {
   footer .inner .copyright {
-    grid-column: 2 / span 1;
-    text: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
   }
 }
 .nf-form-cont {
