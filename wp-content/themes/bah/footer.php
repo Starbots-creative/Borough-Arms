@@ -11,7 +11,7 @@
             </div>
 
             <div class="logo-wrapper">
-                        <a href="" class="logo"><img src="//192.168.0.81:3002/wp-content/themes/bah/images/Borough-Arms-Logo.png"></a>
+            <a href="" class="logo"><img src="<?=get_template_directory_uri();?>/images/Borough-Arms-Logo.png" /></a>
             </div>
 
             <ul class="sublinks">

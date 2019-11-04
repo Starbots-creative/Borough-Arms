@@ -12,7 +12,13 @@ header {
         display:flex;
         justify-content: space-between;
         align-items: center;
-        i {color:@white; font-size:16px;}
+        i {color:@white; font-size:32px;
+
+          @media @breakpoint-large { 
+            font-size:16px;
+          }
+        
+        }
         
         @media @breakpoint-large { 
             align-items: flex-start;
@@ -28,7 +34,7 @@ header {
               display:inline;
               color:@white;
               font-family: @alt-font;
-              padding-right:30px;
+              padding-right:70px;
             }
           }
         

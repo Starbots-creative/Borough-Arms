@@ -93,7 +93,14 @@ add_theme_support('post-thumbnails');
 add_theme_support( 'title-tag' );
 
 
+function showSlider() {
+    
 
+    
+    ?>
+
+
+<?php }
 
 /**
  * Enqueue all style/script assets.
