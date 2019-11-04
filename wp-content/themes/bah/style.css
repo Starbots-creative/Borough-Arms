@@ -781,6 +781,7 @@ h6 {
 }
 p {
   margin-bottom: 20px;
+  font-size: 18px;
 }
 a {
   text-decoration: none;
@@ -859,6 +860,7 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   font-family: 'Raleway';
+  position: relative;
 }
 @media only screen and (min-width: 992px) {
   .main-menu ul li a {
@@ -907,6 +909,37 @@ a {
   }
   .main-menu ul li:last-child a {
     padding-right: 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .main-menu ul li a:hover:after {
+    content: '';
+    display: block;
+    border-bottom: 5px solid #caa1a6;
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
+    left: 50%;
+    width: 80px;
+  }
+  .main-menu ul li:first-child a:hover:after,
+  .main-menu ul li:last-child a:hover:after {
+    content: '';
+    display: block;
+    border-bottom: 5px solid #caa1a6;
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    left: 0px;
+    width: 80px;
+  }
+  .main-menu ul li:first-child a,
+  .main-menu ul li:last-child a {
+    padding-left: 0;
   }
 }
 /*add default*/
@@ -1362,7 +1395,7 @@ header .logo {
 }
 .slider-wrapper .cta {
   background: #caa1a6;
-  padding: 30px;
+  padding: 10px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;

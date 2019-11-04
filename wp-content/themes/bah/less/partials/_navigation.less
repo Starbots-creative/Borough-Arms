@@ -20,12 +20,13 @@
                  color:@white;
                  text-transform: uppercase;  
                  font-family: @alt-font;  
-
+                 position:relative;
                 @media @breakpoint-large {
                     display: block;
-                    padding:20px 35px 45px 35px;
+                    padding:20px 35px 45px 35px; 
         
                 }
+
                
             }
 
@@ -40,22 +41,23 @@
                     transform: translate(-50%, 0px;);
                     left: 50%;
                     width:80px;
-                         
+                  
                 }
 
-                &:first-child, &:last-child
+            
+               &:first-child , &:last-child
                     :after {
                         content:'';
                         display:block;   
                         border-bottom:5px solid @pink;
                         position:absolute;
                         bottom:0;
-                        transform: none;
-                    
+                        transform: none;           
                         left: 0px;
                         width:80px;
-                             
+                              
                     }
+
 
                 }
 
@@ -65,13 +67,6 @@
                         right: 0px;  
                     }
                 }
-
-          
-
-                
-            
-    
-      
 
             @media @breakpoint-large {
                     &:nth-child(4n) {
@@ -92,8 +87,41 @@
 
              }
 
-             
+            @media @breakpoint-large {
+                a:hover:after {
+                        content:'';
+                        display:block;   
+                        border-bottom:5px solid @pink;
+                        position:absolute;
+                        bottom:0;
+                        transform: translate(-50%, 0px;);
+                        left: 50%;
+                        width:80px;
+                    
+                }
+
+                
+                &:first-child , &:last-child {
+                    
+                    a:hover:after {
+                        content:'';
+                        display:block;   
+                        border-bottom:5px solid @pink;
+                        position:absolute;
+                        bottom:0;
+                        transform: none;           
+                        left: 0px;
+                        width:80px;
+                    }
+                    a {
+                        padding-left:0;
+                    }
+                
+                }
+            }
         }
+
+       
     }
 }
 
