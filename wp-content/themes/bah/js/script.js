@@ -1,11 +1,24 @@
 require('./js/partials/modernizr.js');
 var $ = window.jQuery = require('jquery');
 require('owl.carousel');
-
+require('@fancyapps/fancybox/dist/jquery.fancybox.min.js');
 
 
 
 $(document).ready(function() {
+
+    $('[data-fancybox="preview-1"]').fancybox({
+        thumbs : { 
+          autoStart : true
+        }
+    });
+
+    $('[data-fancybox="preview-2"]').fancybox({
+        thumbs : { 
+          autoStart : true
+        }
+    });
+
 
     $('.main-slider').owlCarousel({
         loop:true,
@@ -22,7 +35,7 @@ $(document).ready(function() {
         loop:true,
         items:1,
         transitionStyle : "backSlide",
-        dots:true,
+        dots:true, 
         nav:true,
         navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Arrow.svg'>"],
         

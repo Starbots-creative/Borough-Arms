@@ -45,8 +45,8 @@
                 }
 
             
-               &:first-child , &:last-child
-                    :after {
+               &:first-child :after  , &:last-child :after  {
+                    
                         content:'';
                         display:block;   
                         border-bottom:5px solid @pink;
@@ -55,8 +55,8 @@
                         transform: none;           
                         left: 0px;
                         width:80px;
-                              
-                    }
+               }           
+                    
 
 
                 }

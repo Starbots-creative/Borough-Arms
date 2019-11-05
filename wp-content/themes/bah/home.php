@@ -51,10 +51,12 @@ if(have_rows('module_builder')):
                     <div class="article <?=strtolower(get_sub_field('color'));?>">
                         <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
                         <div class="content">
-                            <h2><?=the_sub_field('heading');?></h2>
-                            <?=the_sub_field('content');?>
+                           <div class="inner">
+                                <h2><?=the_sub_field('heading');?></h2>
+                                <?=the_sub_field('content');?>
 
-                            <a href="" class="button full">Rooms & Suites</a>
+                           
+                            </div>
                         </div>
                         </div>
          
@@ -127,8 +129,8 @@ if(have_rows('module_builder')):
 
     endwhile;
     endif;
-
 ?>
+
 
 <?php get_footer(); ?>
 
