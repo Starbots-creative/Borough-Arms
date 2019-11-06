@@ -75,25 +75,7 @@ if(have_rows('module_builder_dining')):
          <?php endif; ?>
 
 
-        <?php  if( get_row_layout() == 'sub_sections'): ?>
-            <section class="articles">
-
-            <?php while( have_rows('article') ): the_row();
-                    $image = get_sub_field('image');?>
-                    <div class="article <?=strtolower(get_sub_field('color'));?>">
-                        <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
-                        <div class="content">
-                            <h2><?=the_sub_field('heading');?></h2>
-                            <?=the_sub_field('content');?>
-
-                            <a href="" class="button full">Rooms & Suites</a>
-                        </div>
-                        </div>
-         
-        <?php endwhile;?>
-        </section>
-        <?php endif;?>
-
+        
     
       
 

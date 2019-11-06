@@ -1,13 +1,13 @@
 <?php 
-/* Template Name: Homepage */
+/* Template Name: Events */
 get_header(); ?>
 
 <?php
 // check if the flexible content field has rows of data
-if(have_rows('module_builder')):
+if(have_rows('module_builder_events')):
   
     // loop through the rows of data
-    while (have_rows('module_builder')) : the_row();  
+    while (have_rows('module_builder_events')) : the_row();  
 
           if( get_row_layout() == 'slider'): ?>
                 <section class="slider-wrapper">  
@@ -35,66 +35,45 @@ if(have_rows('module_builder')):
          <?php  if( get_row_layout() == 'generic_content'): ?>
             <section class="generic">
                 <div class="inner">           
-                    <h2><?=the_sub_field('heading');?></h2>
+                    <?php if (get_sub_field('heading')): ?>
+                         <h2><?=the_sub_field('heading');?></h2>
+                    <?php endif;?>
+
+          
                     <?=the_sub_field('content');?>
-                    <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
+
+                    <?php if (get_sub_field('button_url')): ?>
+                             <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
+                    <?php endif;?>
                 </div>
          </section>
         <?php endif;?>
 
+       <?php if( get_row_layout() == 'block_grid'): ?>
+                 <div class="grid">
+                        <?php while( have_rows('image_and_text_grid') ): the_row(); 
+                                $caption = get_sub_field('caption');
+                                $image = get_sub_field('image');
+                            
+                        ?>
+                        <div class="item">
+                            <?php if ($image):?>    
+                              <img src="<?php echo $image['url']; ?>"  />
+                            <?php endif;?>
 
-        <?php  if( get_row_layout() == 'sub_sections'): ?>
-            <section class="articles">
-
-            <?php while( have_rows('article') ): the_row();
-                    $image = get_sub_field('image');?>
-                    <div class="article <?=strtolower(get_sub_field('color'));?>">
-                        <div class="image">
-                             <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
-                        </div>
-                        <div class="content">
-                           <div class="inner">
-                                <h2><?=the_sub_field('heading');?></h2>
-                                <?=the_sub_field('content');?>
-
-                           
+                            <div class="content">
+                                    <h3><?=get_sub_field('heading');?></h3>
+                                    <?=get_sub_field('content');?>
                             </div>
-                        </div>
-                        </div>
-         
-        <?php endwhile;?>
-        </section>
-        <?php endif;?>
+                        
+                    </div>
 
+                               
 
-        <?php  if( get_row_layout() == 'wedding_events'):
-            $image = get_sub_field('background_image');?>
-            <section class="hero pink" style="background-image: url('<?=$image['url'];?>">
-                <div class="content">
-                            <h2><?=the_sub_field('heading');?></h2>
-                            <?=the_sub_field('content');?>
+                        <?php endwhile;?>
+                </div>    
+         <?php endif; ?>
 
-                            <div class="action">
-                                 <?php while( have_rows('button') ): the_row();?>
-                                        <a href="<?=the_sub_field('button_url');?>" class="button"><?=the_sub_field('button_text');?></a>
-                                <?php endwhile;?>
-                            </div>
-                </div>
-            </section>
-
-        <?php endif;?>
-
-        
-        <?php  if( get_row_layout() == 'content_block'): ?>
-            <section class="generic">
-                <div class="inner">
-                    
-                    <h2><?=the_sub_field('heading');?></h2>
-                    <?=the_sub_field('content');?>
-                    <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
-                </div>
-         </section>
-        <?php endif;?>
         
         <?php  if( get_row_layout() == 'content_carousel'): ?>
             <section class="voucher">
@@ -131,8 +110,8 @@ if(have_rows('module_builder')):
 
     endwhile;
     endif;
-?>
 
+?>
 
 <?php get_footer(); ?>
 

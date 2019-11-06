@@ -181,4 +181,13 @@ function custom_excerpt($length = 20) {
 	return implode(' ', array_slice(explode(' ', get_the_excerpt()), 0, $length)) . '...';
 }
 
+
+// Method 1: Filter.
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyBzGuAcdehwQj6XGAskIiOfOYJnqH3rAPo';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 ?>
+ 

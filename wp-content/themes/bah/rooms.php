@@ -50,30 +50,7 @@ if(have_rows('module_builder_rooms')):
          </section>
         <?php endif;?>
 
-       <?php if( get_row_layout() == 'block_grid'): ?>
-                 <div class="grid">
-                        <?php while( have_rows('image_and_text_grid') ): the_row(); 
-                                $caption = get_sub_field('caption');
-                                $image = get_sub_field('image');
-                            
-                        ?>
-                        <div class="item">
-                            <?php if ($image):?>    
-                              <img src="<?php echo $image['url']; ?>"  />
-                            <?php endif;?>
-
-                            <div class="content">
-                                    <h3><?=get_sub_field('heading');?></h3>
-                                    <?=get_sub_field('content');?>
-                            </div>
-                        
-                    </div>
-
-                               
-
-                        <?php endwhile;?>
-                </div>    
-         <?php endif; ?>
+     
 
 
          <?php if( get_row_layout() == 'bedrooms'): ?>
