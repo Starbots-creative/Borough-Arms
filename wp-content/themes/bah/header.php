@@ -14,34 +14,35 @@
 	</head>
 	<body <?php body_class(); ?>>
    
+	<div class="header-wrapper">
+			<header>
 
-   <header>
-
-       <div class="toplinks"> 
-	    <a href="" class="menutoggle"><i class="fas  fa-bars"></i></a>
-		<ul class="quicklinks">
-			<li><a href="">Contact</a></li>
-			<li><a href="">Gifts</a></li>
-			<li><a href="">Book</a></li>
-		</ul>
-
-
-        <a href="/" class="logo"><img src="<?=get_template_directory_uri();?>/images/Borough-Arms-Logo.png" />
-		<a href="tel:01782 629421" class="phone"><i class="fas fa-phone-alt"><span>01782 629421</span></i></a>
-	   </div>
- 
+				<div class="toplinks"> 
+					<a href="" class="menutoggle"><i class="fas  fa-bars"></i></a>
+					<ul class="quicklinks">
+						<li><a href="">Contact</a></li>
+						<li><a href="">Gifts</a></li>
+						<li><a href="">Book</a></li>
+					</ul>
 
 
-		<nav id="navbar" class="main-menu navbar-collapse collapse" aria-expanded="false">
-							<?php
-						
-								wp_nav_menu(array(
-									'menu'    => 2, //menu id
-									'walker'  => new Walker_Nav_Menu() //use our custom walker
-								));
-							?>
-						</nav>
+					<a href="/" class="logo"><img src="<?=get_template_directory_uri();?>/images/Borough-Arms-Logo.png" />
+					<a href="tel:01782 629421" class="phone"><i class="fas fa-phone-alt"><span>01782 629421</span></i></a>
+				</div>
+			
 
-  
-   </header>
+
+					<nav id="navbar" class="main-menu navbar-collapse collapse" aria-expanded="false">
+										<?php
+									
+											wp_nav_menu(array(
+												'menu'    => 2, //menu id
+												'walker'  => new Walker_Nav_Menu() //use our custom walker
+											));
+										?>
+									</nav>
+
+			
+			</header>
+	</div>
  

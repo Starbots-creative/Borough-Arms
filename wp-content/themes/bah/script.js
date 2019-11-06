@@ -14107,5 +14107,16 @@ $(document).ready(function () {
         navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>", "<img src='/wp-content/themes/bah/images/White Arrow.svg'>"]
 
     });
+
+    $(window).on('scroll', function () {
+        'use strict';
+
+        if ($(window).scrollTop() > 100) {
+            $('.header-wrapper').addClass('fixed');
+        } else {
+            //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');
+            $('.header-wrapper').removeClass('fixed');
+        }
+    });
 });
 },{"./js/partials/modernizr.js":1,"@fancyapps/fancybox/dist/jquery.fancybox.min.js":2,"jquery":3,"owl.carousel":4}]},{},[5]);

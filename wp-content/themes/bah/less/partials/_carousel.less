@@ -14,11 +14,25 @@
                 margin:0 auto;
                 padding:275px @trim 0 @trim;
                 text-align:center;
-                h1 {font-family: 'Rooney-light'; color:@white;}
+                h1 {font-family: 'Rooney-light'; color:@white;
+                    opacity: 0;
+                    transform: translateY(-50%);
+                    transition: 1.25s all ease;
+             
+                
+                }
             }
         
         }
 
+        .active {
+            .slide {
+                h1 {
+                  opacity:1; 
+                  transform: translateY(0); 
+                }
+            }
+        }
 
         .owl-nav { 
             max-width: @container-width;
