@@ -16,32 +16,29 @@
     color:@white;
     background:#415363;
     font-size:20px;
+    text-transform:uppercase;
 
     // Speed up button taps on mobile.
     touch-action: manipulation;
     // User can't select buttons.
     user-select: none;
 
+    :hover {
+        background-color: darken(@rouge, 10);
+    }
+
     @media @breakpoint-medium {
         // Stop button content wrapping on desktop devices.
         white-space: nowrap;
     }
-    &.full {max-width:100%;}
+    &.full {width:100%;}
     // Button variations.
     &.button-primary {
         color: @white;
         background-color: @primary;
 
-        &:hover {
-            background-color: darken(@primary, 10);
-        }
     }
 
-    svg {
-        margin-left: 5px;
+   
 
-        @media @breakpoint-medium {
-            margin-left: 15px;
-        }
-    }
 }

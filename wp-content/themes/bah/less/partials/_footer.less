@@ -2,7 +2,11 @@
     h2 {color:@pink;}
     .wrapper;
     text-align:center;
-    padding:70px 0 100px;
+    padding:70px 20px 100px 20px;
+
+    @media @breakpoint-large { 
+        padding:120px 0 100px;
+    }
 }
 
 
@@ -19,9 +23,21 @@ footer {
         }
 
         .contact {
+            h3 {
+                font-family:@alt-font;
+                text-transform: uppercase;
+                font-weight:700;
+                font-size:24px;
+                color:@camo;
+            }
             text-align:center;
             @media @breakpoint-large { 
                 text-align:left;
+            }
+            p {
+                font-family:@alt-font;
+                font-weight:100;
+                font-size:16px;   
             }
 
         }
@@ -30,7 +46,12 @@ footer {
 
             @media @breakpoint-large { 
                 text-align:right;
+                
             }
+            font-family:@alt-font;
+            text-transform: uppercase;
+            font-weight:100;
+            font-size:16px;
         }
 
         .logo-wrapper {
@@ -46,12 +67,20 @@ footer {
            
         }
         .copyright {
+            font-family:@alt-font;
+            text-transform: uppercase;
+            font-weight:100;
+            font-size:14px;
+            
             @media @breakpoint-large { 
                 grid-column-start: 2;
                 grid-column-end: 3;
               
                 text-align:center;  
             }
+
+
         }
     }
+    :hover {background:none;}
 } 

@@ -3,10 +3,20 @@
     background:@light-grey;
     text-align:center;
     padding:90px 0;
-
+    
+    @media @breakpoint-large { 
+        padding:120px 0;
+    }
     .inner {
         .wrapper();
-        h2 {color:@camo; .heading_underline();}
+        h2 {color:@camo; .heading_underline();
+            @media @breakpoint-medium { 
+                max-width:@small-container-width;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+        }
         h3 {color:@camo; margin-bottom:50px;}
         .button {margin-top:@trim;
             
@@ -158,6 +168,10 @@
             .slide {
                 padding-left:@trim*2;
                 padding-right:@trim*2;
+                i {
+                    font-size:30px;
+                    color:@border;
+                }
                 h3 {
                     color:@white;
                     font-size:40px;

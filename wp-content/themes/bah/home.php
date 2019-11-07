@@ -9,27 +9,9 @@ if(have_rows('module_builder')):
     // loop through the rows of data
     while (have_rows('module_builder')) : the_row();  
 
-          if( get_row_layout() == 'slider'): ?>
-                <section class="slider-wrapper">  
-                        <div class="main-slider owl-carousel owl-theme">
-                        <?php while( have_rows('hero_slider') ): the_row(); 
-                                $caption = get_sub_field('caption');
-                                $image = get_sub_field('image');
-                            
-                                ?>
-    
-                                <div class="slide"  style="background-image: url('<?php echo $image['url']; ?>">
-                                        <div class="content">
-                                                <h1><?=get_sub_field('caption');?></h1> 
-                                        </div>
-                                </div>
-
-
-                        <?php endwhile;?>
-                        </div>
-                <div class="cta"><p>Book a Room</p></div>
-            </section>    
-         <?php endif; ?>
+          if( get_row_layout() == 'slider'):
+                showSlider();   
+          endif; ?>
 
 
          <?php  if( get_row_layout() == 'generic_content'): ?>
@@ -86,7 +68,7 @@ if(have_rows('module_builder')):
 
         
         <?php  if( get_row_layout() == 'content_block'): ?>
-            <section class="generic">
+            <section class="generic lime">
                 <div class="inner">
                     
                     <h2><?=the_sub_field('heading');?></h2>
@@ -102,6 +84,7 @@ if(have_rows('module_builder')):
                     <div class="slider owl-carousel owl-theme">
                         <?php while( have_rows('carousel') ): the_row(); ?>
                             <div class="slide">
+                                    <i class="fas fa-gift"></i>
                                     <h3><?=the_sub_field('heading');?></h3>
                                     <?=the_sub_field('content');?>
                             </div>

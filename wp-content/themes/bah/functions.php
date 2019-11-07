@@ -93,14 +93,7 @@ add_theme_support('post-thumbnails');
 add_theme_support( 'title-tag' );
 
 
-function showSlider() {
-    
 
-    
-    ?>
-
-
-<?php }
 
 /**
  * Enqueue all style/script assets.
@@ -189,5 +182,29 @@ function my_acf_google_map_api( $api ){
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
-?>
+
+function showSlider() { 
+    ?>
+    <section class="slider-wrapper">  
+      <div class="main-slider owl-carousel owl-theme">
+                <?php while( have_rows('hero_slider') ): the_row(); 
+                    $caption = get_sub_field('caption');
+                    $image = get_sub_field('image');        
+                    ?>
+
+                    <div class="slide"  style="background-image: url('<?php echo $image['url']; ?>">
+                            <div class="content">
+                                    <h1><?=get_sub_field('caption');?></h1> 
+                            </div>
+                    </div>
+
+
+            <?php endwhile;?>
+            </div>
+        <div class="cta"><a href="<?=the_field('booking_link',2);?>">Book a Room</a>
+    </div>
+    </section> 
+
+<?php } ?>
+
  
