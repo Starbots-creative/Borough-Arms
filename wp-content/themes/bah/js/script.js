@@ -7,6 +7,22 @@ require('@fancyapps/fancybox/dist/jquery.fancybox.min.js');
 
 $(document).ready(function() {
 
+
+
+    $('.menutoggle').click(function(e) {
+       
+    
+        e.preventDefault();
+        if ($('.main-menu ul').hasClass('show')) {
+            $('.main-menu ul').removeClass('show');
+            
+        } else {
+            $('.main-menu ul').addClass('show');
+        }
+    });
+
+
+
     $('[data-fancybox="preview-1"]').fancybox({
         thumbs : { 
           autoStart : true

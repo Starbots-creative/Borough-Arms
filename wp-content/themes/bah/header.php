@@ -18,7 +18,7 @@
 			<header>
 
 				<div class="toplinks"> 
-					<a href="" class="menutoggle"><i class="fas  fa-bars"></i></a>
+					<a class="menutoggle"><i class="fas  fa-bars"></i></a>
 					<ul class="quicklinks">
 						<li><a href="">Contact</a></li>
 						<li><a href="">Gifts</a></li>

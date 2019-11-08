@@ -68,7 +68,7 @@ if(have_rows('module_builder')):
 
         
         <?php  if( get_row_layout() == 'content_block'): ?>
-            <section class="generic lime">
+            <section class="generic lime nobg">
                 <div class="inner">
                     
                     <h2><?=the_sub_field('heading');?></h2>

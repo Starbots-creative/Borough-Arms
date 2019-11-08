@@ -1673,6 +1673,7 @@ a:hover {
 }
 .button.full {
   width: 100%;
+  padding: 22px 0px;
 }
 .button.button-primary {
   color: #ffffff;
@@ -1682,7 +1683,17 @@ a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: none;
+  opacity: 0;
+  background: #caa1a6;
+  margin-left: -20px;
+  margin-right: -20px;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+.main-menu ul.show {
+  opacity: 1 !important;
 }
 @media only screen and (min-width: 992px) {
   .main-menu ul {
@@ -1696,19 +1707,33 @@ a:hover {
             justify-content: space-between;
     margin-top: -60px;
     border-bottom: 2px solid #ffffff;
+    opacity: 1;
+    background: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+.main-menu ul li {
+  padding: 6px;
+}
+@media only screen and (min-width: 992px) {
+  .main-menu ul li {
+    padding: 0;
   }
 }
 .main-menu ul li a {
-  display: inline-block;
+  display: block;
   color: #ffffff;
   text-transform: uppercase;
   font-family: 'Raleway';
   position: relative;
+  border-bottom: 1px solid #b6b5b5;
 }
 @media only screen and (min-width: 992px) {
   .main-menu ul li a {
     display: block;
     padding: 20px 35px 45px 35px;
+    border-bottom: none;
   }
 }
 .main-menu ul li a:hover {
@@ -1874,6 +1899,9 @@ a:hover {
     padding-right: 100px;
     font-size: 18px;
   }
+}
+.header-wrapper header .toplinks .menutoggle {
+  cursor: pointer;
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper header .toplinks .menutoggle {
@@ -2097,6 +2125,12 @@ a:hover {
           box-sizing: border-box;
   background: rgba(255, 255, 255, 0.9);
   padding: 50px;
+  height: 100vh;
+}
+@media only screen and (min-width: 992px) {
+  .hero .content {
+    height: auto;
+  }
 }
 .hero .content h2 {
   border-bottom: 1px solid #656d7b;
@@ -2347,6 +2381,9 @@ a:hover {
 }
 .lime .button {
   background: #abc7b8 !important;
+}
+.nobg {
+  background: none;
 }
 .seperator {
   width: 100%;
@@ -2700,6 +2737,7 @@ footer :hover {
   border: none;
   padding: 15px 60px;
   cursor: pointer;
+  width: 100%;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input :hover {
   background-color: #3e2437;
@@ -2711,6 +2749,7 @@ footer :hover {
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input.full {
   width: 100%;
+  padding: 22px 0px;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input.button-primary {
   color: #ffffff;
