@@ -2109,7 +2109,6 @@ a:hover {
           background-size: cover;
   background-repeat: no-repeat fixed;
   background-position: 50% 50%;
-  background: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
