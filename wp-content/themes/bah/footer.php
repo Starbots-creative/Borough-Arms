@@ -21,20 +21,22 @@
                             </div>
                         <div class="sideimage" style="background-image: url('<?=get_template_directory_uri();?>/images/voucher-hero.jpg"></div>
                     </section>
-            <?php endif; ?>
+                <?php endif; ?>
+            <?php endwhile;?>  
 
-            <?php  if( get_row_layout() == 'form'): ?>
 
-                        <div class="signup">
-                        <h2><?=get_sub_field('heading',2);?></h2>
+            <div class="signup">
+            <h2>Sign up for Special Offers</h2>
 
-                            <?php
-                            $ninja_form = get_sub_field('form_name',2);
-                            Ninja_Forms()->display($ninja_form['id']);
-                            ?> 
-                    </div>
-            <?php endif;?>
-            <?php endwhile;?>   
+                <?php
+                //$ninja_form = get_sub_field('form_name',2);
+                //Ninja_Forms()->display($ninja_form['id']);
+        
+                echo do_shortcode('[ninja_form id=2]');
+                ?> 
+        </div>
+      
+        
      
 
   
