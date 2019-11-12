@@ -201,7 +201,7 @@ function showSlider() {
 
             <?php endwhile;?>
             </div>
-        <div class="cta"><a href="<?=the_field('booking_link',2);?>">Book a Room</a>
+        <div class="cta"><a href="<?=the_field('booking_link',2);?>" target="_blank">Book a Room</a>
     </div>
     </section> 
 

@@ -97,37 +97,6 @@ if(have_rows('module_builder_rooms')):
         </section>
         <?php endif;?>
 
-    
-      
-
-        
-        <?php  if( get_row_layout() == 'content_carousel'): ?>
-            <section class="voucher">
-                <div class="carousel" style="background-image: url('<?=get_template_directory_uri();?>/images/voucher-hero.jpg">       
-                    <div class="slider owl-carousel owl-theme">
-                        <?php while( have_rows('carousel') ): the_row(); ?>
-                            <div class="slide">
-                                    <h3><?=the_sub_field('heading');?></h3>
-                                    <?=the_sub_field('content');?>
-                            </div>
-                        <?php endwhile;?>
-                </div>
-                </div>
-            <div class="sideimage" style="background-image: url('<?=get_template_directory_uri();?>/images/voucher-hero.jpg"></div>
-            </section>
-
-        <?php endif;?>
-
-        <?php  if( get_row_layout() == 'form'): ?>
-         <div class="signup">
-             <h2><?=the_sub_field('heading');?></h2>
-                <?php
-                $ninja_form = get_sub_field('form_name');
-             
-                Ninja_Forms()->display($ninja_form['id']);
-                ?> 
-        </div>
-        <?php endif;?>
 
         
 

@@ -1,5 +1,18 @@
 .signup {
-    h2 {color:@pink;}
+    h2 {color:@pink;
+    
+    }
+    &.alt {
+        h2 {
+    
+            color:@camo; .heading_underline();
+            @media @breakpoint-medium { 
+                max-width:@small-container-width;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
     .wrapper;
     text-align:center;
     padding:70px 20px 100px 20px;

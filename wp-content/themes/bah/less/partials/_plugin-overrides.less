@@ -10,24 +10,7 @@
         .nf-after-form {
             display: none;
         }
-        @media @breakpoint-medium { 
-
-                nf-fields-wrap {
-                    display:flex;
-                    align-items: center;
-                    justify-content: center;
-                  
-                    justify-content: space-evenly;
-                    
-                    nf-field:first-child {
-                        width:33%;
-                    }  
-                    nf-field:nth-child(2) {
-                        width:33%; 
-                    }         
-                    
-                }
-        }
+      
 
         .nf-form-layout {
             .nf-before-form-content {
@@ -44,7 +27,7 @@
                                 
 
                                 .nf-field-label {
-                                    display: block;
+                              
                                     line-height: 1.25;
                                     padding: 0;
                                     margin: 0;
@@ -53,6 +36,7 @@
                                         font-size: 16px;
                                         font-weight: 300;
                                         line-height: 1.25;
+                                   
                                     }
                                 }
                                 .nf-field-element {
@@ -93,7 +77,7 @@
                                         border: none;
                                         padding: 15px 60px;
                                         cursor: pointer;
-                                        width:100%;
+                                    
                                     }
                                 }
                             }
@@ -103,6 +87,7 @@
                     .nf-field {
                         .nf-field-label {
                             margin-bottom: 5px;
+                            display:none;
 
                             label {
                                 font-size: 16px;
@@ -155,4 +140,31 @@
             }
         }
     }
+}
+
+/*specific form overrides*/
+#nf-form-2-cont {
+
+    @media @breakpoint-medium { 
+
+        nf-fields-wrap {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        
+            justify-content: space-evenly;
+            
+            nf-field:first-child {
+                width:33%;
+            }  
+            nf-field:nth-child(2) {
+                width:33%; 
+            }         
+            
+        }
+        
+    }
+
+
+
 }

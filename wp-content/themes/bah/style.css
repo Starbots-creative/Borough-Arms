@@ -1935,6 +1935,10 @@ a:hover {
   .header-wrapper header .toplinks .quicklinks li a:hover {
     background: #caa1a6;
   }
+  .header-wrapper header .toplinks .quicklinks li:last-child a {
+    background: #caa1a6;
+    color: #ffffff;
+  }
 }
 .header-wrapper header .logo {
   width: 100px;
@@ -2381,6 +2385,12 @@ a:hover {
 .lime .button {
   background: #abc7b8 !important;
 }
+.white {
+  background: #ffffff;
+}
+.nounderline {
+  border-bottom: none !important;
+}
 .nobg {
   background: none;
 }
@@ -2529,6 +2539,19 @@ a:hover {
 .signup h2 {
   color: #caa1a6;
 }
+.signup.alt h2 {
+  color: #425364;
+  border-bottom: 1px solid #656d7b;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .signup.alt h2 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media only screen and (min-width: 992px) {
   .signup {
     padding: 120px 0 100px;
@@ -2634,32 +2657,6 @@ footer :hover {
 .nf-form-cont .nf-form-wrap .nf-after-form {
   display: none;
 }
-@media only screen and (min-width: 768px) {
-  .nf-form-cont .nf-form-wrap nf-fields-wrap {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-pack: space-evenly;
-    -webkit-justify-content: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .nf-form-cont .nf-form-wrap nf-fields-wrap nf-field:first-child {
-    width: 33%;
-  }
-  .nf-form-cont .nf-form-wrap nf-fields-wrap nf-field:nth-child(2) {
-    width: 33%;
-  }
-}
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-before-form-content {
   display: none;
 }
@@ -2678,7 +2675,6 @@ footer :hover {
           justify-content: space-evenly;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.checkbox-container .nf-field .field-wrap .nf-field-label {
-  display: block;
   line-height: 1.25;
   padding: 0;
   margin: 0;
@@ -2736,7 +2732,6 @@ footer :hover {
   border: none;
   padding: 15px 60px;
   cursor: pointer;
-  width: 100%;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input :hover {
   background-color: #3e2437;
@@ -2756,6 +2751,7 @@ footer :hover {
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label {
   margin-bottom: 5px;
+  display: none;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label label {
   font-size: 16px;
@@ -2792,4 +2788,31 @@ footer :hover {
   font-size: 16px;
   text-align: center;
   margin-top: 20px;
+}
+/*specific form overrides*/
+@media only screen and (min-width: 768px) {
+  #nf-form-2-cont nf-fields-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #nf-form-2-cont nf-fields-wrap nf-field:first-child {
+    width: 33%;
+  }
+  #nf-form-2-cont nf-fields-wrap nf-field:nth-child(2) {
+    width: 33%;
+  }
 }
