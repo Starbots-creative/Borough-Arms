@@ -19,58 +19,20 @@ if(have_rows('module_builder')):
          endif;?>
 
 
-        <?php  if( get_row_layout() == 'sub_sections'): ?>
-            <section class="articles">
-
-            <?php while( have_rows('article') ): the_row();
-                    $image = get_sub_field('image');?>
-                    <div class="article <?=strtolower(get_sub_field('color'));?>">
-                        <div class="image">
-                             <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
-                        </div>
-                        <div class="content">
-                           <div class="inner">
-                                <h2><?=the_sub_field('heading');?></h2>
-                                <?=the_sub_field('content');?>
-
-                           
-                            </div>
-                        </div>
-                        </div>
-         
-        <?php endwhile;?>
-        </section>
-        <?php endif;?>
+        <?php  if( get_row_layout() == 'sub_sections'):
+            showSubSections();
+        endif;?>
 
 
         <?php  if( get_row_layout() == 'wedding_events'):
-            $image = get_sub_field('background_image');?>
-            <section class="hero pink" style="background-image: url('<?=$image['url'];?>">
-                <div class="content">
-                            <h2><?=the_sub_field('heading');?></h2>
-                            <?=the_sub_field('content');?>
+           showWeddingEvents();
 
-                            <div class="action">
-                                 <?php while( have_rows('button') ): the_row();?>
-                                        <a href="<?=the_sub_field('button_url');?>" class="button"><?=the_sub_field('button_text');?></a>
-                                <?php endwhile;?>
-                            </div>
-                </div>
-            </section>
-
-        <?php endif;?>
+        endif;?>
 
         
-        <?php  if( get_row_layout() == 'content_block'): ?>
-            <section class="generic lime nobg">
-                <div class="inner">
-                    
-                    <h2><?=the_sub_field('heading');?></h2>
-                    <?=the_sub_field('content');?>
-                    <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
-                </div>
-         </section>
-        <?php endif;?>
+        <?php  if( get_row_layout() == 'content_block'):
+            showContentBlock();
+        endif;?>
         
  
 
@@ -83,5 +45,7 @@ if(have_rows('module_builder')):
 ?>
 
 
-<?php get_footer(); ?>
+<?php 
+
+get_footer(); ?>
 

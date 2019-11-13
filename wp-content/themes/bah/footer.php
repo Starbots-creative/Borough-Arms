@@ -1,7 +1,4 @@
 
-        <?php wp_footer(); ?>
-
-  
        
            <?php  while (have_rows('module_builder',2)) : the_row();   ?>
             <?php  if( get_row_layout() == 'content_carousel'): ?>
@@ -29,21 +26,14 @@
             <h2>Sign up for Special Offers</h2>
 
                 <?php
-                //$ninja_form = get_sub_field('form_name',2);
-                //Ninja_Forms()->display($ninja_form['id']);
-        
-                echo do_shortcode('[ninja_form id=2]');
+  
+                Ninja_Forms()->display(2);
+          
+                
                 ?> 
         </div>
       
-        
-     
-
   
-  
-
-
-
         <footer>
         <div class="inner">
 
@@ -66,10 +56,12 @@
             </ul>
 
             <p class="copyright">
-            Website by Starbots Creative<br>
+            Website by <a href="https://starbots-creative.co.uk/" target="_blank">Starbots Creative</a><br>
             © Borough Arms Hotel. All rights reserved
             </p>
          </div>
 </footer>
 	</body>
 </html>
+<?php wp_footer(); ?>
+

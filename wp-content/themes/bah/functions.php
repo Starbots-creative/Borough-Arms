@@ -208,9 +208,9 @@ function showSlider() {
     <?php } 
 
 
-function showtextImageGrid() { ?>
+function showtextImageGrid($class='') { ?>
 
-                <div class="grid">
+                <div class="grid <?=$class;?>">
                         <?php while( have_rows('image_and_text_grid') ): the_row(); 
                                 $caption = get_sub_field('caption');
                                 $image = get_sub_field('image');
@@ -249,4 +249,119 @@ function showGeneric() { ?>
 </section>
 
 
+<?php }
+
+function showSubSections() { ?>
+
+<section class="articles">
+
+<?php while( have_rows('article') ): the_row();
+        $image = get_sub_field('image');?>
+        <div class="article <?=strtolower(get_sub_field('color'));?>">
+            <div class="image">
+                 <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
+            </div>
+            <div class="content">
+               <div class="inner">
+                    <h2><?=the_sub_field('heading');?></h2>
+                    <?=the_sub_field('content');?>
+
+               
+                </div>
+            </div>
+            </div>
+
+<?php endwhile;?>
+</section>
+
+<?php }
+
+
+function showWeddingEvents() { 
+$image = get_sub_field('background_image');?>
+<section class="hero pink" style="background-image: url('<?=$image['url'];?>">
+    <div class="content">
+                <h2><?=the_sub_field('heading');?></h2>
+                <?=the_sub_field('content');?>
+
+                <div class="action">
+                     <?php while( have_rows('button') ): the_row();?>
+                            <a href="<?=the_sub_field('button_link');?>" class="button"><?=the_sub_field('button_text');?></a>
+                    <?php endwhile;?>
+                </div>
+    </div>
+</section>
+<?php }
+
+
+function showContentBlock() { ?>
+<section class="generic lime nobg">
+<div class="inner">
+    
+    <h2><?=the_sub_field('heading');?></h2>
+    <?=the_sub_field('content');?>
+    <?php if (get_sub_field('button_url') !== ""):?>
+            <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
+    <?php endif;?>
+</div>
+</section>
+<?php }
+
+
+function showRooms() { ?>
+
+<section class="rooms">
+<?php 
+$i=1;
+while( have_rows('room') ): the_row(); 
+$gallery = get_sub_field('gallery');
+$firstImage = $gallery[0]['sizes']['large'];?>
+
+
+
+    <div class="item">
+              <div class="gallery">
+                        <img src="<?=$firstImage;?>" alt="" />
+                         <a data-fancybox-trigger="preview-<?=$i;?>"  class="play fancy-circle"><i class="fas fa-camera"></i></a>
+                              
+                </div>
+
+                <div class="content">
+                        <h2> <?=get_sub_field('heading');?></h3>
+                        <?=get_sub_field('content');?>
+                        <a href="" class="button full">Book Online</a>
+                </div>
+                
+                <ul class="gallery-children">
+                <?php foreach( $gallery as $image ): ?>
+                   <a href="<?php echo $image['url']; ?>" " data-fancybox="preview-<?=$i;?>">
+                           <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+                   </a>
+           <?php endforeach; ?>
+        </div>
+    <?php 
+    $i++;
+    endwhile;?>
+
+    <div class="info">
+    <?=get_sub_field('contents');?>
+    </div>
+</section>
+<?php }
+
+
+function showMap() { ?>
+<section class="generic">
+<div class="inner">           
+    <?php if (get_sub_field('heading')): ?>
+         <h3><?=the_sub_field('heading');?></h3>
+    <?php endif;?>
+
+    <div class="map">
+         <?=the_sub_field('google_map');?>
+    </div>
+
+    <?=the_sub_field('content');?>
+</div>
+</section>
 <?php }

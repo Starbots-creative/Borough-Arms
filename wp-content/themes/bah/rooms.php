@@ -20,73 +20,15 @@ if(have_rows('module_builder_rooms')):
      
 
 
-         <?php if( get_row_layout() == 'bedrooms'): ?>
-
-        <section class="rooms">
-
-        <?php 
-        $i=1;
-        while( have_rows('room') ): the_row(); 
-        $gallery = get_sub_field('gallery');
-        $firstImage = $gallery[0]['sizes']['large'];?>
-        
-     
-        
-            <div class="item">
-                      <div class="gallery">
-                                <img src="<?=$firstImage;?>" alt="" />
-                                 <a data-fancybox-trigger="preview-<?=$i;?>"  class="play fancy-circle"><i class="fas fa-camera"></i></a>
-                                      
-                        </div>
-
-                        <div class="content">
-                                <h2> <?=get_sub_field('heading');?></h3>
-                                <?=get_sub_field('content');?>
-                                <a href="" class="button full">Book Online</a>
-                        </div>
-                        
-                        <ul class="gallery-children">
-                        <?php foreach( $gallery as $image ): ?>
-                           <a href="<?php echo $image['url']; ?>" " data-fancybox="preview-<?=$i;?>">
-                                   <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-                           </a>
-                   <?php endforeach; ?>
-                </div>
-            <?php 
-            $i++;
-            endwhile;?>
-
-            <div class="info">
-            <?=get_sub_field('contents');?>
-            </div>
-        </section>
-
-        <?php endif; ?>
+         <?php if( get_row_layout() == 'bedrooms'):
+            showRooms();
+        endif; ?>
 
 
-        <?php  if( get_row_layout() == 'sub_sections'): ?>
-            <section class="articles">
-
-            <?php while( have_rows('article') ): the_row();
-                    $image = get_sub_field('image');?>
-                    <div class="article <?=strtolower(get_sub_field('color'));?>">
-                    
-                        <div class="image">
-                             <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
-                        </div>
-
-
-                        <div class="content">
-                            <h2><?=the_sub_field('heading');?></h2>
-                            <?=the_sub_field('content');?>
-
-                     
-                        </div>
-                        </div>
-         
-        <?php endwhile;?>
-        </section>
-        <?php endif;?>
+   
+        <?php  if( get_row_layout() == 'sub_sections'):
+            showSubSections();
+        endif;?>
 
 
         

@@ -3287,9 +3287,6 @@ a:hover {
       -ms-user-select: none;
           user-select: none;
 }
-.button :hover {
-  background-color: #3e2437;
-}
 @media only screen and (min-width: 768px) {
   .button {
     white-space: nowrap;
@@ -3302,6 +3299,12 @@ a:hover {
 .button.button-primary {
   color: #ffffff;
   background-color: #000000;
+}
+.button:hover {
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  background: rgba(66, 83, 100, 0.9) !important;
 }
 .main-menu ul {
   margin: 0;
@@ -3581,7 +3584,7 @@ a:hover {
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper.fixed {
-    height: 131px;
+    height: 95px;
   }
 }
 .header-wrapper.fixed header {
@@ -3599,13 +3602,35 @@ a:hover {
 }
 .header-wrapper.fixed header .main-menu ul {
   border-bottom: none;
+  margin-top: -10px;
+}
+@media only screen and (min-width: 992px) {
+  .header-wrapper.fixed header .main-menu ul a {
+    padding-top: 30px;
+  }
+}
+.header-wrapper.fixed header .main-menu::before {
+  border-bottom: 0;
+}
+@media only screen and (min-width: 992px) {
+  .header-wrapper.fixed header .quicklinks {
+    display: none;
+  }
+  .header-wrapper.fixed header .phone {
+    display: none;
+  }
 }
 .header-wrapper.fixed header .logo {
   width: 70px;
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper.fixed header .logo {
-    width: 80px;
+    width: 70px;
+    position: absolute;
+    -webkit-transform: translate(-50%, 0px);
+        -ms-transform: translate(-50%, 0px);
+            transform: translate(-50%, 0px);
+    left: 50%;
   }
 }
 /*reusable modules*/
@@ -3936,6 +3961,59 @@ a:hover {
   color: #425364;
   font-size: 44px;
 }
+.grid .item a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+  /* Sweep To Bottom */
+  background: none;
+}
+.grid .item a:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(202, 161, 166, 0.75);
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+      transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+     transition-timing-function: ease-out;
+}
+.grid .item a:hover:before {
+  -webkit-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+      transform: scaleY(1);
+}
 /*rooms + gallery*/
 .rooms {
   margin: 50px auto;
@@ -4006,21 +4084,21 @@ a:hover {
   border-bottom: 1px solid #caa1a6 !important;
 }
 .pink .button {
-  background: #caa1a6 !important;
+  background: #caa1a6;
 }
 .green h2 {
   color: #006168 !important;
   border-bottom: 1px solid #006168 !important;
 }
 .green .button {
-  background: #006168 !important;
+  background: #006168;
 }
 .lime h2 {
   color: #abc7b8 !important;
   border-bottom: 1px solid #abc7b8 !important;
 }
 .lime .button {
-  background: #abc7b8 !important;
+  background: #abc7b8;
 }
 .white {
   background: #ffffff;
@@ -4376,9 +4454,6 @@ footer :hover {
   padding: 15px 60px;
   cursor: pointer;
 }
-.nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input :hover {
-  background-color: #3e2437;
-}
 @media only screen and (min-width: 768px) {
   .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input {
     white-space: nowrap;
@@ -4391,6 +4466,12 @@ footer :hover {
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input.button-primary {
   color: #ffffff;
   background-color: #000000;
+}
+.nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.submit-container .nf-field .field-wrap .nf-field-element input:hover {
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  background: rgba(66, 83, 100, 0.9) !important;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label {
   margin-bottom: 5px;

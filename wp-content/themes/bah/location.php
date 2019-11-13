@@ -14,50 +14,18 @@ if(have_rows('module_builder_location')):
          endif; ?>
 
 
-         <?php  if( get_row_layout() == 'map'): ?>
-            <section class="generic">
-                <div class="inner">           
-                    <?php if (get_sub_field('heading')): ?>
-                         <h3><?=the_sub_field('heading');?></h3>
-                    <?php endif;?>
+         <?php  if( get_row_layout() == 'map'):
+           showMap();
+        endif;?>
 
-                    <div class="map">
-                         <?=the_sub_field('google_map');?>
-                    </div>
-
-                    <?=the_sub_field('content');?>
-                </div>
-         </section>
-        <?php endif;?>
-
-        <?php  if( get_row_layout() == 'sub_sections'): ?>
-            <section class="articles">
-
-            <?php while( have_rows('article') ): the_row();
-                    $image = get_sub_field('image');?>
-                    <div class="article <?=strtolower(get_sub_field('color'));?>">
-
-                        <div class="image">
-                             <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
-                        </div>
-
-                        <div class="content">
-                           <div class="inner">
-                                <h2><?=the_sub_field('heading');?></h2>
-                                <?=the_sub_field('content');?>
-
-                           
-                            </div>
-                        </div>
-                        </div>
-         
-        <?php endwhile;?>
-        </section>
-        <div class="seperator pink"></div>
-        <?php endif;?>
+  
+        <?php  if( get_row_layout() == 'sub_sections'):
+            showSubSections();
+        endif;?>
 
        <?php if( get_row_layout() == 'block_grid'): ?>
-                <?php showtextImageGrid(); ?>   
+                 <div class="seperator pink"></div>
+                <?php showtextImageGrid('etM2'); ?>   
         <?php endif; ?>
 
 

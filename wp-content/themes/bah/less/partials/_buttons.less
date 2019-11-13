@@ -23,9 +23,7 @@
     // User can't select buttons.
     user-select: none;
 
-    :hover {
-        background-color: darken(@rouge, 10);
-    }
+
 
     @media @breakpoint-medium {
         // Stop button content wrapping on desktop devices.
@@ -41,6 +39,9 @@
 
     }
 
-   
+    &:hover {
+        transition: 0.5s all ease;
+        background:rgba(66,83,100,0.9) !important;
 
+    }
 }
