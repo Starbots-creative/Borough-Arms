@@ -1,8 +1,8 @@
 require('./js/partials/modernizr.js');
 var $ = window.jQuery = require('jquery');
+require('jquery-ui-dist/jquery-ui.min.js');
 require('owl.carousel');
 require('@fancyapps/fancybox/dist/jquery.fancybox.min.js');
-
 
 
 $(document).ready(function() {
@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('.menutoggle').click(function(e) {
        
     
-        e.preventDefault();
+        e.preventDefault(); 
         if ($('.main-menu ul').hasClass('show')) {
             $('.main-menu ul').removeClass('show');
             
@@ -67,6 +67,10 @@ $(document).ready(function() {
         //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');
         $('.header-wrapper').removeClass('fixed');
     }
+
+  
+     $( "#accordion" ).accordion();
+     
 });
 
 

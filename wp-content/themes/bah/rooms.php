@@ -14,23 +14,9 @@ if(have_rows('module_builder_rooms')):
          endif; ?>
 
 
-         <?php  if( get_row_layout() == 'generic_content'): ?>
-            <section class="generic">
-                <div class="inner">           
-                    <?php if (get_sub_field('heading')): ?>
-                         <h2><?=the_sub_field('heading');?></h2>
-                    <?php endif;?>
-
-          
-                    <?=the_sub_field('content');?>
-
-                    <?php if (get_sub_field('button_url')): ?>
-                             <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
-                    <?php endif;?>
-                </div>
-         </section>
-        <?php endif;?>
-
+        <?php  if( get_row_layout() == 'generic_content'): 
+            showGeneric();
+         endif;?>
      
 
 
@@ -84,7 +70,12 @@ if(have_rows('module_builder_rooms')):
             <?php while( have_rows('article') ): the_row();
                     $image = get_sub_field('image');?>
                     <div class="article <?=strtolower(get_sub_field('color'));?>">
-                        <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
+                    
+                        <div class="image">
+                             <img src="<?php echo $image['url']; ?>" alt="Bedroom" />
+                        </div>
+
+
                         <div class="content">
                             <h2><?=the_sub_field('heading');?></h2>
                             <?=the_sub_field('content');?>

@@ -205,4 +205,48 @@ function showSlider() {
     </div>
     </section> 
 
-<?php } ?>
+    <?php } 
+
+
+function showtextImageGrid() { ?>
+
+                <div class="grid">
+                        <?php while( have_rows('image_and_text_grid') ): the_row(); 
+                                $caption = get_sub_field('caption');
+                                $image = get_sub_field('image');
+                            
+                        ?>
+                        <div class="item">
+                            <?php if ($image):?>    
+                            <a href="<?=get_sub_field('link');?>">
+                                    <img src="<?php echo $image['url']; ?>"  />
+                            </a>
+                            <?php endif;?>
+
+                            <div class="content">
+                                    <h3><?=get_sub_field('heading');?></h3>
+                                    <?=get_sub_field('content');?>
+                            </div>
+                        
+                    </div>
+                        <?php endwhile;?>
+                </div> 
+
+<?php }
+
+function showGeneric() { ?>
+
+<section class="generic">
+                <div class="inner">           
+                <?php if (get_sub_field('heading')): ?>   
+                      <h2><?=the_sub_field('heading');?></h2>
+                <?php endif;?>
+                    <?=the_sub_field('content');?>
+                    <?php if (get_sub_field('button_url')): ?>
+                             <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
+                    <?php endif;?>
+                </div>
+</section>
+
+
+<?php }

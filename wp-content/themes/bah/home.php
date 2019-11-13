@@ -14,15 +14,9 @@ if(have_rows('module_builder')):
           endif; ?>
 
 
-         <?php  if( get_row_layout() == 'generic_content'): ?>
-            <section class="generic">
-                <div class="inner">           
-                    <h2><?=the_sub_field('heading');?></h2>
-                    <?=the_sub_field('content');?>
-                    <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
-                </div>
-         </section>
-        <?php endif;?>
+         <?php  if( get_row_layout() == 'generic_content'): 
+            showGeneric();
+         endif;?>
 
 
         <?php  if( get_row_layout() == 'sub_sections'): ?>

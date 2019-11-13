@@ -14,22 +14,9 @@ if(have_rows('module_builder_contact')):
           endif; ?>
 
 
-         <?php  if( get_row_layout() == 'generic_content'): ?>
-            <section class="generic">
-                <div class="inner">           
-                    <?php if (get_sub_field('heading')): ?>
-                         <h2><?=the_sub_field('heading');?></h2>
-                    <?php endif;?>
-
-          
-                    <?=the_sub_field('content');?>
-
-                    <?php if (get_sub_field('button_url')): ?>
-                             <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
-                    <?php endif;?>
-                </div>
-         </section>
-        <?php endif;?>
+        <?php  if( get_row_layout() == 'generic_content'): 
+            showGeneric();
+         endif;?>
 
         
         <?php  if( get_row_layout() == 'form'): ?>
