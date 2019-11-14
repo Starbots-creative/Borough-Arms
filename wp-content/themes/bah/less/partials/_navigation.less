@@ -78,7 +78,7 @@
                         left: 0px;
                         width:80px;
                }           
-                    
+                     
 
 
                 }
@@ -123,7 +123,7 @@
                 }
 
                 
-                &:first-child , &:last-child {
+                &:first-child {
                     
                     a:hover:after {
                         content:'';
@@ -140,6 +140,25 @@
                     }
                 
                 }
+
+
+                &:last-child {
+                    
+                    a:hover:after {
+                        content:'';
+                        display:block;   
+                        border-bottom:5px solid @pink;
+                        position:absolute;
+                        bottom:0;
+                        transform: none;           
+                        left: 30px;
+                        width:80px;
+                    }
+                
+                
+                }
+
+               
             }
         }
 
