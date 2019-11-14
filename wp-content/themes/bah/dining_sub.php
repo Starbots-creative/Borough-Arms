@@ -76,6 +76,50 @@ if(have_rows('module_builder_dining_sub')):
      <?php endif;?>
 
 
+     
+     <?php  if( get_row_layout() == 'testimonials'): ?>
+            <section class="reviews">
+                    <div class="inner">
+                                <h2>Testimonials</h2>
+          
+                                <div class="slider owl-carousel owl-theme">
+                                    <?php while(have_rows('testimonials')):   the_row(); ?>
+                                
+                                        <div class="slide">
+                                            
+                                                <h3><?=the_sub_field('name');?></h2></h3>
+                                                <?=the_sub_field('content');?>
+                                        </div>
+                                        
+                                     <?php endwhile;?>
+                            </div>
+                    </div>
+            </section>
+          
+        <?php endif;?>
+
+
+        <?php  if( get_row_layout() == 'downloads'): ?>
+            <section class="generic">
+                    <div class="inner">
+                                <h2><?=get_sub_field('heading');?></h2>
+                                <ul class="list left">
+
+                                    <?php while(have_rows('downloads')):   the_row(); 
+                                      $file = get_sub_field('file');
+                                    ?>  
+                                                      
+                                    <li><i class="fas fa-download"></i><a href=" <?php echo $file['url']; ?>" target="_blank"><?php echo $file['title']; ?></a></lI>                                         
+   
+                             <?php endwhile;?>
+                             </ul>          
+                    </div>
+            </section>
+          
+        <?php endif;?>
+
+
+
 
 
     <?php
