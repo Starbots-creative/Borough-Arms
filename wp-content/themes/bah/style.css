@@ -3623,7 +3623,11 @@ a {
 }
 .header-wrapper.fixed header .main-menu ul {
   border-bottom: none;
-  margin-top: -10px;
+}
+@media only screen and (min-width: 992px) {
+  .header-wrapper.fixed header .main-menu ul {
+    margin-top: -10px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper.fixed header .main-menu ul a {
