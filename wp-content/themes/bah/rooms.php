@@ -30,6 +30,10 @@ if(have_rows('module_builder_rooms')):
             showSubSections();
         endif;?>
 
+<?php  if( get_row_layout() == 'content_carousel'):
+            specialOffers();
+        endif;?>
+
 
         
 

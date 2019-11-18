@@ -1,32 +1,11 @@
 
-       
-           <?php  while (have_rows('module_builder',2)) : the_row();   ?>
-            <?php  if( get_row_layout() == 'content_carousel'): ?>
-                    <section class="voucher">
-                            <div class="carousel" style="background-image: url('<?=get_template_directory_uri();?>/images/voucher-hero.jpg">       
-                                <div class="slider owl-carousel owl-theme">
-                                    <?php while(have_rows('carousel',2)):   the_row(); ?>
-                                
-                                        <div class="slide">
-                                                <i class="fas fa-gift"></i>
-                                                <h3><?=the_sub_field('heading');?></h3>
-                                                <?=the_sub_field('content');?>
-                                        </div>
-                                        
-                                    <?php endwhile;?>
-                            </div>
-                            </div>
-                        <div class="sideimage" style="background-image: url('<?=get_template_directory_uri();?>/images/voucher-hero.jpg"></div>
-                    </section>
-                <?php endif; ?>
-            <?php endwhile;?>  
-
+     
 
             <div class="signup">
             <h2>Sign up for Special Offers</h2>
 
                 <?php
-  
+
                 Ninja_Forms()->display(2);
           
                 

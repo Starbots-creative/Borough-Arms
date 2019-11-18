@@ -14119,7 +14119,7 @@ $(document).ready(function () {
         transitionStyle: "backSlide",
         dots: true,
         nav: true,
-        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>", "<img src='/wp-content/themes/bah/images/White Arrow.svg'>"]
+        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>", "<img src='/wp-content/themes/bah/images/White Right Arrow.svg'>"]
 
     });
 
@@ -14129,7 +14129,9 @@ $(document).ready(function () {
         transitionStyle: "backSlide",
         dots: true,
         nav: true,
-        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>", "<img src='/wp-content/themes/bah/images/White Arrow.svg'>"]
+        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>", "<img src='/wp-content/themes/bah/images/White Right Arrow.svg'>"],
+        onInitialized: counter,
+        onTranslated: counter
 
     });
 
@@ -14145,5 +14147,21 @@ $(document).ready(function () {
 
         $("#accordion").accordion();
     });
+
+    function counter(event) {
+        var element = event.target;
+        var items = event.item.count;
+        var item = event.item.index + 1;
+
+        // it loop is true then reset counter from 1
+        if (item > items) {
+            item = item - items;
+        }
+
+        var imgReplace = $('.swap').find('.' + item).data('src');
+
+        $('.carousel').css('background-image', 'url(' + imgReplace + ')');
+        $('.sideimage').css('background-image', 'url(' + imgReplace + ')');
+    }
 });
 },{"./js/partials/modernizr.js":1,"@fancyapps/fancybox/dist/jquery.fancybox.min.js":2,"jquery":4,"jquery-ui-dist/jquery-ui.min.js":3,"owl.carousel":5}]},{},[6]);

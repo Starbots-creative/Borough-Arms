@@ -1,4 +1,4 @@
- .main-menu {
+.main-menu {
 
     ul {
         margin: 0;
@@ -34,6 +34,11 @@
             @media @breakpoint-large {
                 padding:0;
             }
+
+            @media @breakpoint-large {
+                &.menuhide {display:none;}
+            }
+
             a {
                 display: block;
                  color:@white;
@@ -58,7 +63,7 @@
                     content:'';
                     display:block;   
                     border-bottom:5px solid @pink;
-                    position:absolute;
+                    position:absolute; 
                     bottom:0;
                     transform: translate(-50%, 0px;);
                     left: 50%;
@@ -67,7 +72,7 @@
                 }
 
             
-               &:first-child :after  , &:last-child :after  {
+               &:first-child :after , &:nth-child(6n) :after  {
                     
                         content:'';
                         display:block;   
@@ -75,20 +80,21 @@
                         position:absolute;
                         bottom:0;
                         transform: none;           
-                        left: 0px;
+                        left: 30px;
                         width:80px;
-               }           
+                    }   
+                    
+                    
+                    &:first-child :after  {
+                        left:0px;
+                        right: 0px; 
+                        content:''; 
+                    
+                }
                      
+               }
 
-
-                }
-
-                &:last-child {
-                    :after {
-                        left:auto;
-                        right: 0px;  
-                    }
-                }
+            
 
             @media @breakpoint-large {
                     &:nth-child(4n) {
@@ -101,7 +107,7 @@
                         }
                     }
 
-                    &:last-child {
+                    &:nth-child(6n) {
                         a {
                             padding-right:0;
                         }
@@ -142,7 +148,7 @@
                 }
 
 
-                &:last-child {
+                &:nth-child(6n) {
                     
                     a:hover:after {
                         content:'';

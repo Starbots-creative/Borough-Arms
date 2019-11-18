@@ -235,7 +235,6 @@ function showtextImageGrid($class='') { ?>
 <?php }
 
 function showGeneric() { ?>
-
 <section class="generic">
                 <div class="inner">           
                 <?php if (get_sub_field('heading')): ?>   
@@ -249,7 +248,9 @@ function showGeneric() { ?>
 </section>
 
 
+
 <?php }
+
 
 function showSubSections() { ?>
 
@@ -365,3 +366,42 @@ function showMap() { ?>
 </div>
 </section>
 <?php }
+
+
+function specialOffers() {
+    
+    $i=1;
+    $images = array();?>
+
+    <div class="swap">
+    <?php
+    while(have_rows('carousel')):   the_row(); 
+        $gallery = get_sub_field('offer_image');
+        $images[] = $gallery['sizes']['large'];
+        echo "<img data-src='".$gallery['sizes']['large']."' class='$i' />";
+        
+     $i++;
+   endwhile;
+    ?>
+    </div>
+
+                    <section class="voucher">
+                            <div class="carousel" style="background-image: url('<?=$images[0];?>')">       
+                                <div class="slider owl-carousel owl-theme">
+                                    <?php while(have_rows('carousel')):   the_row(); ?>
+                                
+                                        <div class="slide">
+                                                <i class="fas fa-gift"></i>
+                                                <h3><?=the_sub_field('heading');?></h3>
+                                                <?=the_sub_field('content');?>
+                                        </div>
+                                        
+                                    <?php endwhile;?>
+                            </div>
+                            </div>
+                        <div class="sideimage" style="background-image: url('<?=$images[0];?>')"></div>
+                        <div id="counter"></div> 
+  </div>
+                    </section>
+          
+            <?php }

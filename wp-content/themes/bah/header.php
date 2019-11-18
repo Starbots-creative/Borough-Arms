@@ -32,7 +32,7 @@
 			
 
 
-					<nav id="navbar" class="main-menu navbar-collapse collapse" aria-expanded="false">
+				<nav id="navbar" class="main-menu navbar-collapse collapse" aria-expanded="false">
 										<?php
 									
 											wp_nav_menu(array(

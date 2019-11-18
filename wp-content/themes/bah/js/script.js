@@ -42,7 +42,7 @@ $(document).ready(function() {
         transitionStyle : "backSlide",
         dots:true,
         nav:true,
-        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Arrow.svg'>"],
+        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Right Arrow.svg'>"],
         
     }) 
   
@@ -53,10 +53,12 @@ $(document).ready(function() {
         transitionStyle : "backSlide", 
         dots:true, 
         nav:true,
-        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Arrow.svg'>"],
-        
+        navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Right Arrow.svg'>"],
+        onInitialized  : counter,
+        onTranslated : counter 
+
     }) 
- 
+  
 
     $(window).on('scroll', function(){'use strict';
     if ( $(window).scrollTop() > 100 ) {
@@ -73,6 +75,22 @@ $(document).ready(function() {
      
 });
 
+
+function counter(event) {
+    var element   = event.target;         
+     var items     = event.item.count;     
+     var item      = event.item.index + 1;    
+   
+   // it loop is true then reset counter from 1
+   if(item > items) {
+     item = item - items
+   }
+  
+   var imgReplace = $('.swap').find('.'+item).data('src');
+
+  $('.carousel').css('background-image','url('+imgReplace+')');
+  $('.sideimage').css('background-image','url('+imgReplace+')');
+ }
 
 
 

@@ -23,6 +23,9 @@ if(have_rows('module_builder_events')):
             <?php showtextImageGrid(); ?>   
          <?php endif; ?>
 
+         <?php  if( get_row_layout() == 'content_carousel'):
+            specialOffers();
+        endif;?>
      
     <?php
 

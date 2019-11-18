@@ -23,6 +23,10 @@ if(have_rows('module_builder_dining')):
          
          <?php endif; ?>
 
+         <?php  if( get_row_layout() == 'content_carousel'):
+            specialOffers();
+        endif;?>
+
     <?php
 
     endwhile;

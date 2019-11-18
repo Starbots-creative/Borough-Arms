@@ -3353,6 +3353,11 @@ a {
     padding: 0;
   }
 }
+@media only screen and (min-width: 992px) {
+  .main-menu ul li.menuhide {
+    display: none;
+  }
+}
 .main-menu ul li a {
   display: block;
   color: #ffffff;
@@ -3387,7 +3392,7 @@ a {
   width: 80px;
 }
 .main-menu ul li.current-menu-item:first-child :after,
-.main-menu ul li.current-menu-item:last-child :after {
+.main-menu ul li.current-menu-item:nth-child(6n) :after {
   content: '';
   display: block;
   border-bottom: 5px solid #caa1a6;
@@ -3396,12 +3401,13 @@ a {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
-  left: 0px;
+  left: 30px;
   width: 80px;
 }
-.main-menu ul li:last-child :after {
-  left: auto;
+.main-menu ul li.current-menu-item:first-child :after {
+  left: 0px;
   right: 0px;
+  content: '';
 }
 @media only screen and (min-width: 992px) {
   .main-menu ul li:nth-child(4n) {
@@ -3410,7 +3416,7 @@ a {
   .main-menu ul li:first-child a {
     padding-left: 0;
   }
-  .main-menu ul li:last-child a {
+  .main-menu ul li:nth-child(6n) a {
     padding-right: 0;
   }
 }
@@ -3442,7 +3448,7 @@ a {
   .main-menu ul li:first-child a {
     padding-left: 0;
   }
-  .main-menu ul li:last-child a:hover:after {
+  .main-menu ul li:nth-child(6n) a:hover:after {
     content: '';
     display: block;
     border-bottom: 5px solid #caa1a6;
@@ -3595,7 +3601,7 @@ a {
   background: #415363;
   z-index: 50;
   width: 100%;
-  height: 90px;
+  height: 100px;
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper.fixed {
@@ -4454,6 +4460,7 @@ footer :hover {
   line-height: 1.25;
   padding: 0;
   margin: 0;
+  color: #787878;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.checkbox-container .nf-field .field-wrap .nf-field-label label {
   font-size: 16px;
@@ -4530,7 +4537,6 @@ footer :hover {
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label {
   margin-bottom: 5px;
-  display: none;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label label {
   font-size: 16px;
@@ -4538,6 +4544,7 @@ footer :hover {
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-label label .ninja-forms-req-symbol {
   color: #cc0000;
+  display: none;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-element input,
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container .nf-field .nf-field-element select,

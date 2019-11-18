@@ -53,6 +53,10 @@ if(have_rows('module_builder_contact')):
         <?php  if( get_row_layout() == 'content_block'):
             showContentBlock();
         endif;?>
+
+      <?php  if( get_row_layout() == 'content_carousel'):
+            specialOffers();
+        endif;?>
         
     <?php
 

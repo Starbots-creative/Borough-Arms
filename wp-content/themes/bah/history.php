@@ -23,6 +23,11 @@ if(have_rows('module_builder_history')):
             <?php showtextImageGrid(); ?>   
          <?php endif; ?>
 
+    
+         <?php  if( get_row_layout() == 'content_carousel'):
+            specialOffers();
+        endif;?>
+
 
         
        
