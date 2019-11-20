@@ -14108,6 +14108,38 @@ $(document).ready(function () {
         }
     });
 
+    $('[data-fancybox="gallery"]').fancybox({
+        thumbs: {
+            autoStart: true
+        }
+    });
+
+    $(".gallery").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds 
+        nav: false,
+        responsiveClass: true,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1
+
+            },
+            768: {
+                items: 2,
+
+                margin: 10
+            },
+            1024: {
+                items: 3,
+
+                loop: false,
+                margin: 10
+            }
+        }
+
+    });
+
     $('.main-slider').owlCarousel({
         loop: true,
         items: 1,

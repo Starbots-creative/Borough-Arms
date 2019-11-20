@@ -45,6 +45,12 @@ if(have_rows('module_builder')):
             specialOffers();
         endif;?>
 
+
+       <?php  if( get_row_layout() == 'gallery'):
+        showGallery();
+       endif;?>
+
+
         
  
 

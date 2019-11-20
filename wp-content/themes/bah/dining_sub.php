@@ -49,6 +49,12 @@ if(have_rows('module_builder_dining_sub')):
                 <?php showtextImageGrid();
          endif; ?>
 
+         
+       <?php  if( get_row_layout() == 'gallery'):
+           showGallery();
+       endif;?>
+
+
 
     <?php
 

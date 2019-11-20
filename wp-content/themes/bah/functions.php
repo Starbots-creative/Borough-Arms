@@ -486,3 +486,27 @@ function showFormAlt() { ?>
             </div>
 
 <?php } ?>
+
+
+<?php function showGallery() { ?>
+
+    <div class="gallery-wrapper">
+            <h3><?=get_sub_field('heading');?></h3>
+                <div class="gallery owl-carousel owl-theme">
+                    
+                    <?php
+                        $images = get_sub_field('gallery');
+                        if( $images ):
+                            foreach( $images as $image ): ?>
+                                <div class="item">
+                                <a href="<?php echo esc_url($image['url']);?>"  data-fancybox="gallery">
+                                            <img src="<?php echo esc_url($image['sizes']['medium']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                    </a>
+                            </div>
+                        <?php  endforeach;
+                        endif; ?>
+
+
+            </div>
+         </div>
+         <?php } ?>
