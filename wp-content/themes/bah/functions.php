@@ -220,6 +220,7 @@ function showtextImageGrid($class='') { ?>
                             <?php if ($image):?>    
                             <a href="<?=get_sub_field('link');?>">
                                     <img src="<?php echo $image['url']; ?>"  />
+                                    <div class="text">Click to view more</div>
                             </a>
                             <?php endif;?>
 
@@ -252,9 +253,9 @@ function showGeneric() { ?>
 <?php }
 
 
-function showSubSections() { ?>
+function showSubSections($class='') { ?>
 
-<section class="articles">
+<section class="articles <?=$class;?>">
 
 <?php while( have_rows('article') ): the_row();
         $image = get_sub_field('image');?>
@@ -302,7 +303,9 @@ function showContentBlock() { ?>
     <h2><?=the_sub_field('heading');?></h2>
     <?=the_sub_field('content');?>
     <?php if (get_sub_field('button_url') !== ""):?>
-            <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?></a>
+            <a href="<?=the_sub_field('button_url');?>" class="button full"><?=the_sub_field('button_text');?>
+         
+        </a>
     <?php endif;?>
 </div>
 </section>
@@ -404,4 +407,82 @@ function specialOffers() {
   </div>
                     </section>
           
-            <?php }
+ <?php }
+
+
+function showAccordion() { ?>
+
+<section class="accordion">
+        <div class="inner" id="accordion">  
+        
+            <?php while( have_rows('items') ): the_row(); ?>
+
+            <h3><?=get_sub_field('heading');?></h3>
+     
+            <div>
+            <?=get_sub_field('content');?>  
+            </div>
+
+
+         <?php endwhile; ?>
+        </div>
+
+</section>
+
+<?php }
+
+function showDownloads() { ?>
+<section class="generic">
+<div class="inner">
+            <h2><?=get_sub_field('heading');?></h2>
+            <ul class="list left">
+
+                <?php while(have_rows('downloads')):   the_row(); 
+                  $file = get_sub_field('file');
+                ?>  
+                                  
+                <li><i class="fas fa-download"></i><a href=" <?php echo $file['url']; ?>" target="_blank"><?php echo $file['title']; ?></a></lI>                                         
+
+         <?php endwhile;?>
+         </ul>          
+</div>
+</section>
+<?php }
+
+
+function showTestimonials() {?>
+
+<section class="reviews">
+                    <div class="inner">
+                                <h2>Testimonials</h2>
+          
+                                <div class="slider owl-carousel owl-theme">
+                                    <?php while(have_rows('testimonials')):   the_row(); ?>
+                                
+                                        <div class="slide">
+                                            
+                                                <h3><?=the_sub_field('name');?></h2></h3>
+                                                <?=the_sub_field('content');?>
+                                        </div>
+                                        
+                                     <?php endwhile;?>
+                            </div>
+                    </div>
+            </section>
+<?php }
+
+
+function showFormAlt() { ?>
+
+<div class="seperator" />
+            <div class="signup alt ">
+                <h2><?=get_sub_field('heading');?></h2>
+                <?=get_sub_field('content');?>
+
+                <?php
+                $ninja_form = get_sub_field('form_name'); 
+                Ninja_Forms()->display($ninja_form['id']);
+                ?> 
+            </div>
+
+<?php } ?>

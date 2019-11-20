@@ -20,7 +20,7 @@ if(have_rows('module_builder_events')):
 
 
        <?php if( get_row_layout() == 'block_grid'): ?>
-            <?php showtextImageGrid(); ?>   
+            <?php showtextImageGrid('etM2'); ?>   
          <?php endif; ?>
 
          <?php  if( get_row_layout() == 'content_carousel'):

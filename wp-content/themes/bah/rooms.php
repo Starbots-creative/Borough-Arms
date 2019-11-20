@@ -27,7 +27,7 @@ if(have_rows('module_builder_rooms')):
 
    
         <?php  if( get_row_layout() == 'sub_sections'):
-            showSubSections();
+            showSubSections('lbm');
         endif;?>
 
 <?php  if( get_row_layout() == 'content_carousel'):

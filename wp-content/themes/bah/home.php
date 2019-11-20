@@ -39,12 +39,7 @@ if(have_rows('module_builder')):
             showContentBlock();
         endif;?>
 
-        
-        <?php if( get_row_layout() == 'block_grid'): ?>
-                <?php showtextImageGrid(); ?>   
-         
-         <?php endif; ?>
-
+    
         
         <?php  if( get_row_layout() == 'content_carousel'):
             specialOffers();

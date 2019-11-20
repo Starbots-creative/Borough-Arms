@@ -112,9 +112,11 @@
         width:100%;
         height:100px;
         @media @breakpoint-large { 
+          height:140px;
+        }
+        @media @breakpoint-xxlarge {  
           height:95px;
         }
-  
         
          header {
   
@@ -141,13 +143,14 @@
             }
            
            @media @breakpoint-large { 
-              .quicklinks { display:none;}
+              .quicklinks li:first-child,      .quicklinks li:nth-child(2n)  { display:none;}
+              .quicklinks {float:right;}
               .phone {display:none;}
-            
-
-           }
-  
-           .logo {width:70px;
+            }
+            @media @breakpoint-xxlarge { 
+              .quicklinks {position:absolute; right:-90px; top:12px;}
+            }
+           .logo {width:70px; z-index:10;
             @media @breakpoint-large { 
               width:70px;
               position: absolute;

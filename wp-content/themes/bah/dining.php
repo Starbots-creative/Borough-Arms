@@ -19,7 +19,7 @@ if(have_rows('module_builder_dining')):
          endif;?>
 
        <?php if( get_row_layout() == 'block_grid'): ?>
-                <?php showtextImageGrid(); ?>   
+                <?php showtextImageGrid('etM2'); ?>   
          
          <?php endif; ?>
 

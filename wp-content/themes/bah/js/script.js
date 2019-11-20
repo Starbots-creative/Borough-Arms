@@ -1,4 +1,4 @@
-require('./js/partials/modernizr.js');
+
 var $ = window.jQuery = require('jquery');
 require('jquery-ui-dist/jquery-ui.min.js');
 require('owl.carousel');
