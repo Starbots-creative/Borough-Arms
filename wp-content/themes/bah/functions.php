@@ -324,7 +324,7 @@ $firstImage = $gallery[0]['sizes']['large'];?>
 
 
     <div class="item">
-              <div class="gallery">
+              <div class="room">
                         <img src="<?=$firstImage;?>" alt="" />
                          <a data-fancybox-trigger="preview-<?=$i;?>"  class="play fancy-circle"><i class="fas fa-camera"></i></a>
                               

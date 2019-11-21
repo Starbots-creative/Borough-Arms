@@ -4095,15 +4095,15 @@ a {
     grid-gap: 20px;
   }
 }
-.rooms .item .gallery {
+.rooms .item .room {
   position: relative;
 }
-.rooms .item .gallery .play {
+.rooms .item .room .play {
   position: absolute;
   bottom: -10px;
   right: -10px;
 }
-.rooms .item .gallery .play i {
+.rooms .item .room .play i {
   color: #ffffff;
   font-size: 20px;
 }
