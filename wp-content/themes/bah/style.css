@@ -3871,6 +3871,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   background-repeat: repeat;
+  padding-bottom: 50px;
 }
 .voucher .carousel {
   overflow: hidden;
@@ -4414,7 +4415,7 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .signup {
-    padding: 120px 0 100px;
+    padding: 50px 0 100px;
   }
 }
 footer {

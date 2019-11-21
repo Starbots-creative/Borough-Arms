@@ -22,6 +22,8 @@
                 26 KING STREET <br>
                 NEWCASTLE-UNDER-LYME  |  ST5 1HX <br>
                 <a href="tel:01782 629421"><span>01782 629421</span></a>
+                <a href="mailto:info@borough-arms-hotel.co.uk"><span>info@borough-arms-hotel.co.uk</span></a>
+                
             </p>
             </div>
 
