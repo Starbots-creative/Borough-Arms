@@ -36,7 +36,7 @@
                 <li><a href="/history/">History</a></li>
                 <li><a href="/faqs">FAQS</a></li>
                 <li><a href="/privacy-policy/"">PRIVACY POLICY</a></li>
-                <li><a href="/history/">Contact</a></li>
+                <li><a href="/enquiry/">Contact</a></li>
                 <li><a href="/terms-and-conditions/">TERMS &amp; CONDITIONS</a></li>
             </ul>
 

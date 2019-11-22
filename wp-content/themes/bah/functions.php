@@ -474,7 +474,7 @@ function showTestimonials() {?>
 
 function showFormAlt() { ?>
 
-<div class="seperator" />
+<div class="seperator"></div>
             <div class="signup alt ">
                 <h2><?=get_sub_field('heading');?></h2>
                 <?=get_sub_field('content');?>
