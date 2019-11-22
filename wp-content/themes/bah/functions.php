@@ -474,7 +474,7 @@ function showTestimonials() {?>
 
 function showFormAlt() { ?>
 
-            <div class="seperator"></div>
+<div class="seperator"></div>
             <div class="signup alt ">
                 <h2><?=get_sub_field('heading');?></h2>
                 <?=get_sub_field('content');?>
@@ -483,12 +483,11 @@ function showFormAlt() { ?>
                 $ninja_form = get_sub_field('form_name'); 
                 Ninja_Forms()->display($ninja_form['id']);
                 ?> 
-            </div>  
+            </div>
+<?php }
 
-<?php } ?>
 
-
-<?php function showGallery() { ?>
+function showGallery() { ?>
 
     <div class="gallery-wrapper">
             <h3><?=get_sub_field('heading');?></h3>
