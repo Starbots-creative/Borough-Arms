@@ -21,7 +21,7 @@
 					<a class="menutoggle"><i class="fas  fa-bars"></i></a>
 					<ul class="quicklinks">
 						<li><a href="/enquiry">Contact</a></li>
-						<li><a href="">Gifts</a></li>
+						<li><a href="/gifts">Gifts</a></li>
 						<li><a href="<?=the_field('booking_link',2);?>" target="_blank">Book</a></li>
 					</ul>
 
