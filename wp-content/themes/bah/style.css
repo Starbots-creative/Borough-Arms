@@ -3990,7 +3990,7 @@ a {
 @media only screen and (min-width: 768px) {
   .grid {
     grid-template-columns: 50% 50%;
-    grid-gap: 20px;
+    grid-gap: 30px;
   }
 }
 .grid .item .content {
