@@ -14168,11 +14168,16 @@ $(document).ready(function () {
         if ($(window).scrollTop() > 100) {
             $('.header-wrapper').addClass('fixed');
         } else {
-            //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');
+            //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');c
             $('.header-wrapper').removeClass('fixed');
         }
 
-        $("#accordion").accordion();
+        $("#accordion").accordion({
+            active: 'none',
+            heightStyle: "content"
+
+        });
+        $("#accordion div").css({ 'height': 'auto' });
     });
 
     function counter(event) {

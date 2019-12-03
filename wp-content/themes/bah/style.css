@@ -1498,6 +1498,9 @@ body.compensate-for-scrollbar {
   text-indent: -99999px;
   overflow: hidden;
   background-repeat: no-repeat;
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
 .ui-widget-icon-block {
   left: 50%;
@@ -2297,7 +2300,6 @@ body .ui-tooltip {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 .ui-widget .ui-widget {
@@ -2307,7 +2309,6 @@ body .ui-tooltip {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 .ui-widget.ui-widget-content {
@@ -2464,25 +2465,19 @@ a.ui-button:active,
 ----------------------------------*/
 /* states and images */
 .ui-icon {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png");
+  background-image: url("images/down-arrow.png");
 }
 .ui-widget-header .ui-icon {
-  background-image: url("images/ui-icons_444444_256x240.png");
-}
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon,
-.ui-button:hover .ui-icon,
-.ui-button:focus .ui-icon {
-  background-image: url("images/ui-icons_555555_256x240.png");
+  background-image: url("images/down-arrow.png");
 }
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
-  background-image: url("images/ui-icons_ffffff_256x240.png");
+  background-image: url("images/up-arrow.png");
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
@@ -2534,15 +2529,6 @@ a.ui-button:active,
 }
 .ui-icon-triangle-1-ne {
   background-position: -16px -16px;
-}
-.ui-icon-triangle-1-e {
-  background-position: -32px -16px;
-}
-.ui-icon-triangle-1-se {
-  background-position: -48px -16px;
-}
-.ui-icon-triangle-1-s {
-  background-position: -65px -16px;
 }
 .ui-icon-triangle-1-sw {
   background-position: -80px -16px;
