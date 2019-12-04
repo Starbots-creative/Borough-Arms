@@ -26,6 +26,12 @@ if(have_rows('module_builder_events')):
          <?php  if( get_row_layout() == 'content_carousel'):
             specialOffers();
         endif;?>
+
+
+      <?php  if( get_row_layout() == 'form'):
+           showFormAlt();
+        endif;?>
+
      
     <?php
 

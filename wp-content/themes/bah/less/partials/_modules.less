@@ -70,10 +70,10 @@
             }
 
             @media @breakpoint-large { 
-                padding:50px 0 0;
+                padding:0;
                 width:50%;
                 margin-left:50px;
-                align-self:flex-end;
+                align-self:flex-start;
             }
      
         }
@@ -139,7 +139,9 @@
     display:flex;
     background-repeat: repeat;
     padding-bottom:50px;
-
+    a {
+        color: @white;
+    }
     @media @breakpoint-large { 
        
     }
@@ -397,6 +399,12 @@
     padding:90px 0 30px 0;
 
     border-top: 10px solid #caa1a6;
+
+    .body  {
+        .wrapper();
+        p {margin-bottom:@trim*2;}  
+    }
+
     .inner {
         .wrapper();
     }

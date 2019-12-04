@@ -14131,7 +14131,7 @@ $(document).ready(function () {
                 margin: 10
             },
             1024: {
-                items: 3,
+                items: 5,
 
                 loop: false,
                 margin: 10

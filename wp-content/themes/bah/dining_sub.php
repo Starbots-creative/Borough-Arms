@@ -39,6 +39,10 @@ if(have_rows('module_builder_dining_sub')):
             showDownloads();
           endif;?>
 
+      <?php  if( get_row_layout() == 'content_block'):
+            showContentBlock();
+        endif;?>
+
 
         <?php  if( get_row_layout() == 'content_carousel'):
             specialOffers();
@@ -54,7 +58,11 @@ if(have_rows('module_builder_dining_sub')):
            showGallery();
        endif;?>
 
-
+       
+<?php  if( get_row_layout() == 'wedding_events'):
+           showWeddingEvents();
+ 
+        endif;?>
 
     <?php
 

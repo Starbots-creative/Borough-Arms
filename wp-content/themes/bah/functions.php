@@ -268,7 +268,9 @@ function showSubSections($class='') { ?>
                     <h2><?=the_sub_field('heading');?></h2>
                     <?=the_sub_field('content');?>
 
-               
+                    <?php if (get_sub_field('cta_url')): ?>
+                    <a href="<?=the_sub_field('cta_url');?>" class="button"><?=the_sub_field('cta_text');?></a>
+                    <?php endif;?>
                 </div>
             </div>
             </div>
@@ -413,8 +415,15 @@ function specialOffers() {
 function showAccordion() { ?>
 
 <section class="accordion">
+
+        <div class="body">
+        <?=get_sub_field('content');?>  
+        </div>
+
         <div class="inner" id="accordion">  
         
+
+
             <?php while( have_rows('items') ): the_row(); ?>
 
             <h3><?=get_sub_field('heading');?></h3>

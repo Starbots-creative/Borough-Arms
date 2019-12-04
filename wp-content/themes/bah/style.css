@@ -3244,6 +3244,7 @@ p {
 a {
   text-decoration: none;
   color: #000000;
+  text-decoration: underline;
 }
 .list {
   color: #425364;
@@ -3275,6 +3276,7 @@ a {
   background: #415363;
   font-size: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
@@ -3355,6 +3357,7 @@ a {
   font-family: 'Raleway';
   position: relative;
   border-bottom: 1px solid #b6b5b5;
+  text-decoration: none;
 }
 @media only screen and (min-width: 992px) {
   .main-menu ul li a {
@@ -3569,6 +3572,7 @@ a {
     font-size: 16px;
     display: inline-block;
     border: 1px solid #caa1a6;
+    text-decoration: none;
   }
   .header-wrapper header .toplinks .quicklinks li a:hover {
     background: #caa1a6;
@@ -3768,12 +3772,12 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .articles .article .content {
-    padding: 50px 0 0;
+    padding: 0;
     width: 50%;
     margin-left: 50px;
-    -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-            align-self: flex-end;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -3858,6 +3862,9 @@ a {
   display: flex;
   background-repeat: repeat;
   padding-bottom: 50px;
+}
+.voucher a {
+  color: #ffffff;
 }
 .voucher .carousel {
   overflow: hidden;
@@ -4124,6 +4131,17 @@ a {
 .accordion {
   padding: 90px 0 30px 0;
   border-top: 10px solid #caa1a6;
+}
+.accordion .body {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 20px;
+  margin: auto ;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.accordion .body p {
+  margin-bottom: 40px;
 }
 .accordion .inner {
   max-width: 1100px;
@@ -4574,6 +4592,7 @@ footer :hover {
   background: #415363;
   font-size: 20px;
   text-transform: uppercase;
+  text-decoration: none;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
   -webkit-user-select: none;
