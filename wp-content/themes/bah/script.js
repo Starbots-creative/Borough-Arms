@@ -14086,11 +14086,40 @@ require('@fancyapps/fancybox/dist/jquery.fancybox.min.js');
 
 $(document).ready(function () {
 
+    function setup_collapsible_submenus() {
+        var $menu = $('.main-menu'),
+            top_level_link = '.main-menu .menu-item-has-children > a';
+
+        $menu.find('a').each(function () {
+            $(this).off('click');
+
+            if ($(this).is(top_level_link)) {
+                $(this).attr('href', '#');
+            }
+
+            if (!$(this).siblings('.sub-menu').length) {
+                $(this).on('click', function (event) {
+                    $(this).parents('.mobile_nav').trigger('click');
+                });
+            } else {
+                $(this).on('click', function (event) {
+                    event.preventDefault();
+                    if ($(this).next('.sub-menu').hasClass('toggle')) {
+                        $(this).next('.sub-menu').removeClass('toggle');
+                    } else {
+                        $(this).next('.sub-menu').addClass('toggle');
+                    }
+                });
+            }
+        });
+    }
+    setup_collapsible_submenus();
+
     $('.menutoggle').click(function (e) {
 
         e.preventDefault();
-        if ($('.main-menu ul').hasClass('show')) {
-            $('.main-menu ul').removeClass('show');
+        if ($('.main-menu > ul').hasClass('show')) {
+            $('.main-menu > ul').removeClass('show');
         } else {
             $('.main-menu ul').addClass('show');
         }
