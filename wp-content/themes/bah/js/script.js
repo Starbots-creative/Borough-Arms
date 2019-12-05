@@ -17,7 +17,7 @@ $(document).ready(function() {
             $(this).off('click');
               
             if ( $(this).is(top_level_link) ) {
-                $(this).attr('href', '#');
+               
             }
               
             if ( ! $(this).siblings('.sub-menu').length ) {
@@ -47,8 +47,8 @@ $(document).ready(function() {
        
     
         e.preventDefault(); 
-        if ($('.main-menu > ul').hasClass('show')) {
-            $('.main-menu > ul').removeClass('show');
+        if ($('.main-menu ul').hasClass('show')) {
+            $('.main-menu ul').removeClass('show');
             
         } else {
             $('.main-menu ul').addClass('show');
@@ -122,12 +122,12 @@ $(document).ready(function() {
         navText: ["<img src='/wp-content/themes/bah/images/White Arrow.svg'>","<img src='/wp-content/themes/bah/images/White Right Arrow.svg'>"],
         onInitialized  : counter,
         onTranslated : counter 
-
+ 
     }) 
   
 
     $(window).on('scroll', function(){'use strict';
-    if ( $(window).scrollTop() > 100 ) {
+    if ( $(window).scrollTop() > 100 ) { 
         $('.header-wrapper').addClass('fixed');
     
  
@@ -140,6 +140,7 @@ $(document).ready(function() {
      $( "#accordion" ).accordion({ 
          active : 'none',
          heightStyle: "content",
+         collapsible: true
          
         });
         $("#accordion div").css({ 'height': 'auto' });

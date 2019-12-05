@@ -3374,7 +3374,7 @@ a {
   position: relative;
 }
 .menu-main-navigation-container > ul > li.menu-item-has-children a:after {
-  content: '\2BC6';
+  content: '\25bc';
   position: absolute;
   right: 0;
   top: 0;
