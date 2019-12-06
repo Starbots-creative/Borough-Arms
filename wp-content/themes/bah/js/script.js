@@ -135,14 +135,14 @@ $(document).ready(function() {
         //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');c
         $('.header-wrapper').removeClass('fixed');
     }
-
+ 
   
-     $( "#accordion" ).accordion({ 
-   
-        collapsible: true,
-    
-         
+     $( ".accordions" ).accordion({ 
+          active: false,
+         collapsible: true
         });
+
+
         $("#accordion div").css({ 'height': 'auto' });
 });
 

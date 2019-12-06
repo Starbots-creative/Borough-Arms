@@ -420,7 +420,7 @@ function showAccordion() { ?>
         <?=get_sub_field('content');?>  
         </div>
 
-        <div class="inner" id="accordion">  
+        <div class="inner accordions" id="accordion">  
         
 
 
@@ -521,4 +521,11 @@ function showGallery() { ?>
 
             </div>
          </div>
-         <?php } ?>
+         <?php } 
+
+
+
+         add_action('wp_enqueue_scripts', 'no_more_jquery');
+function no_more_jquery(){
+    wp_deregister_script('jquery');
+}

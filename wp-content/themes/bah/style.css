@@ -3039,7 +3039,8 @@ a.ui-button:active,
   -webkit-border-bottom-right-radius: 0px;
           border-bottom-right-radius: 0px;
 }
-/**   
+/*@import (less) '../node_modules/jquery-ui-dist/jquery-ui.theme.css';*/
+/**  
  * Variables and mixins. 
  */
 @font-face {
@@ -4031,7 +4032,7 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .voucher .carousel .slider .owl-nav .owl-next {
-    left: -50px;
+    right: -50px;
   }
 }
 .voucher .sideimage {
