@@ -12,8 +12,12 @@
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
        
+        @media @breakpoint-large-max {
+            display:none;
+        }
 
         &.show {opacity:1 !important;
+            display:block !important;
           
         }
 

@@ -14200,8 +14200,7 @@ $(document).ready(function () {
         }
 
         $("#accordion").accordion({
-            active: 'none',
-            heightStyle: "content",
+
             collapsible: true
 
         });

@@ -138,9 +138,9 @@ $(document).ready(function() {
 
   
      $( "#accordion" ).accordion({ 
-         active : 'none',
-         heightStyle: "content",
-         collapsible: true
+   
+        collapsible: true,
+    
          
         });
         $("#accordion div").css({ 'height': 'auto' });

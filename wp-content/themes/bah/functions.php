@@ -424,16 +424,20 @@ function showAccordion() { ?>
         
 
 
-            <?php while( have_rows('items') ): the_row(); ?>
+            <?php 
+            $i=1;
+            while( have_rows('items') ): the_row(); ?>
 
-            <h3><?=get_sub_field('heading');?></h3>
+            <h3 id="ac<?=$i;?>"><?=get_sub_field('heading');?></h3>
      
             <div>
             <?=get_sub_field('content');?>  
             </div>
 
 
-         <?php endwhile; ?>
+         <?php 
+        $i++;
+        endwhile; ?>
         </div>
 
 </section>

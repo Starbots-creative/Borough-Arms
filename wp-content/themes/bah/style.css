@@ -3039,8 +3039,7 @@ a.ui-button:active,
   -webkit-border-bottom-right-radius: 0px;
           border-bottom-right-radius: 0px;
 }
-/*@import (less) '../node_modules/jquery-ui-dist/jquery-ui.theme.css';*/
-/**  
+/**   
  * Variables and mixins. 
  */
 @font-face {
@@ -3316,8 +3315,14 @@ a {
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
 }
+@media only screen and (max-width: 992px) {
+  .menu-main-navigation-container > ul {
+    display: none;
+  }
+}
 .menu-main-navigation-container > ul.show {
   opacity: 1 !important;
+  display: block !important;
 }
 @media only screen and (min-width: 992px) {
   .menu-main-navigation-container > ul {
@@ -4007,17 +4012,27 @@ a {
   color: #FFF;
 }
 .voucher .carousel .slider .owl-nav .owl-prev {
-  left: -50px;
+  left: -40px;
   top: -100px;
   position: absolute;
   width: 100px;
 }
+@media only screen and (min-width: 992px) {
+  .voucher .carousel .slider .owl-nav .owl-prev {
+    left: -50px;
+  }
+}
 .voucher .carousel .slider .owl-nav .owl-next {
-  right: -50px;
+  right: -40px;
   left: auto;
   top: -100px;
   position: absolute;
   width: 100px;
+}
+@media only screen and (min-width: 992px) {
+  .voucher .carousel .slider .owl-nav .owl-next {
+    left: -50px;
+  }
 }
 .voucher .sideimage {
   display: none;
@@ -4140,6 +4155,7 @@ a {
 .rooms {
   margin: 50px auto;
   max-width: 1100px;
+  padding: 0 20px;
 }
 .rooms .item {
   display: grid;
@@ -4612,7 +4628,7 @@ footer :hover {
   line-height: 1.25;
   padding: 0;
   margin: 0;
-  color: #787878;
+  color: #000 !important;
 }
 .nf-form-cont .nf-form-wrap .nf-form-layout .nf-form-content .nf-field-container.checkbox-container .nf-field .field-wrap .nf-field-label label {
   font-size: 16px;
@@ -4754,6 +4770,18 @@ footer :hover {
   #nf-form-2-cont nf-fields-wrap nf-field:nth-child(2) {
     width: 33%;
   }
+}
+input::-webkit-input-placeholder {
+  color: #000000;
+}
+input::-moz-placeholder {
+  color: #000000;
+}
+input::-ms-input-placeholder {
+  color: #000000;
+}
+input::placeholder {
+  color: #000000;
 }
 /*jquery ui*/
 .ui-accordion .ui-accordion-header {
