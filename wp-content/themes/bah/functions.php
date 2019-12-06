@@ -420,25 +420,21 @@ function showAccordion() { ?>
         <?=get_sub_field('content');?>  
         </div>
 
-        <div class="inner accordions" id="accordion">  
-        
+       <div class="accordionwrapper">
+            <?php while( have_rows('items') ): the_row(); ?>
 
-
-            <?php 
-            $i=1;
-            while( have_rows('items') ): the_row(); ?>
-
-            <h3 id="ac<?=$i;?>"><?=get_sub_field('heading');?></h3>
-     
-            <div>
-            <?=get_sub_field('content');?>  
+                        
+            <div class="accordionItem close">
+                    <h2 class="accordionItemHeading"><?=get_sub_field('heading');?><i class="fas fa-angle-down"></i></h2>
+                    
+                    <div class="accordionItemContent">
+                    <?=get_sub_field('content');?>  
+                    </div>
             </div>
 
 
-         <?php 
-        $i++;
-        endwhile; ?>
-        </div>
+         <?php endwhile; ?>
+</div> 
 
 </section>
 
@@ -521,11 +517,4 @@ function showGallery() { ?>
 
             </div>
          </div>
-         <?php } 
-
-
-
-         add_action('wp_enqueue_scripts', 'no_more_jquery');
-function no_more_jquery(){
-    wp_deregister_script('jquery');
-}
+         <?php } ?>

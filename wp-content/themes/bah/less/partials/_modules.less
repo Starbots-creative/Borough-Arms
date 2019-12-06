@@ -457,3 +457,69 @@
         .item {margin:10px;}
     }
 }
+
+.accordionwrapper{
+    .wrapper();
+
+}
+.accordionItem{ 
+   display:flex;
+    display:block;
+    width:100%;
+    box-sizing: border-box;
+
+}
+.accordionItemHeading{
+    cursor:pointer;
+    margin:0px 0px 10px 0px;
+    padding:10px;
+    border:1px solid #ddd;
+    color:@black;
+
+    background:@white;  
+    font-size:20px;
+    position:relative;
+
+    i {
+        position: absolute;
+        right:16px;
+        top:15px;
+    }
+
+}
+.close .accordionItemContent{
+    height:0px;
+    transition:height 1s ease-out;
+    -webkit-transform: scaleY(0);
+	-o-transform: scaleY(0); 
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+    float:left;
+    display:block;
+   }
+    
+    
+.open .accordionItemContent{
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    width: 100%; 
+    margin: 0px 0px 10px 0px;
+    display:block;
+    -webkit-transform-origin: top;
+	-o-transform-origin: top;
+	-ms-transform-origin: top;
+	transform-origin: top;
+
+	-webkit-transition: -webkit-transform 0.4s ease-out;
+	-o-transition: -o-transform 0.4s ease;
+	-ms-transition: -ms-transform 0.4s ease; 
+	transition: transform 0.4s ease;
+        box-sizing: border-box;
+}
+
+.open .accordionItemHeading{
+    background: @pink;
+}
+   
+

@@ -1,8 +1,28 @@
 
 var $ = window.jQuery = require('jquery');
-require('jquery-ui-dist/jquery-ui.min.js');
+
 require('owl.carousel');
 require('@fancyapps/fancybox/dist/jquery.fancybox.min.js');
+
+ 
+
+
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+var i;
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') { 
+        this.parentNode.className = 'accordionItem open';
+    }
+}
 
 
 $(document).ready(function() {
@@ -135,17 +155,7 @@ $(document).ready(function() {
         //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');c
         $('.header-wrapper').removeClass('fixed');
     }
- 
-  
-     $( ".accordions" ).accordion({ 
-          active: false,
-         collapsible: true
-        });
-
-
-        $("#accordion div").css({ 'height': 'auto' });
 });
-
 
 function counter(event) {
     var element   = event.target;         
@@ -153,7 +163,7 @@ function counter(event) {
      var item      = event.item.index + 1;    
    
    // it loop is true then reset counter from 1
-   if(item > items) {
+   if(item > items) { 
      item = item - items
    }
   

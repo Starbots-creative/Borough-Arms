@@ -31,7 +31,8 @@
     "@fortawesome/fontawesome-free": "^5.10.2",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "responsive-tabs": "^1.6.3"
   },
   "browserslist": [
     "> 4%",

@@ -48,6 +48,5 @@
 </footer>
 	</body>
 </html>
-<script data-search-pseudo-elements="" src="//192.168.0.81:3002/wp-content/themes/bah/script.js"></script>
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 
