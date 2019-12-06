@@ -1788,12 +1788,22 @@ a {
     display: block;
   }
   .menu-main-navigation-container > ul > li.menu-item-has-children:hover :after {
-    content: '' !important;
+    content: '\25bc';
     border: none !important;
   }
   .menu-main-navigation-container > ul > li.menu-item-has-children :after {
-    content: '' !important;
+    content: '\25bc';
     border: none !important;
+    position: absolute;
+    right: 16px !important;
+    left: auto  !important;
+    top: 18px !important;
+    bottom: auto !important;
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
+    width: auto !important;
+    opacity: 0.5;
   }
 }
 .menu-main-navigation-container > ul > li.current-menu-item {
@@ -1887,6 +1897,9 @@ a {
 }
 .menu-main-navigation-container .sub-menu.toggle {
   display: block;
+}
+.menu-main-navigation-container .sub-menu:after {
+  content: '' !important;
 }
 @media only screen and (min-width: 500px) {
   .menu-main-navigation-container .sub-menu {
@@ -2089,6 +2102,9 @@ a {
   .header-wrapper.fixed header .main-menu ul {
     margin-top: -10px;
   }
+  .header-wrapper.fixed header .main-menu ul li.menu-item-has-children :after {
+    top: 30px !important;
+  }
 }
 @media only screen and (min-width: 992px) {
   .header-wrapper.fixed header .main-menu ul a {
@@ -2165,7 +2181,6 @@ a {
 }
 .generic .inner h3 {
   color: #425364;
-  margin-bottom: 50px;
 }
 .generic .inner .button {
   margin-top: 20px;

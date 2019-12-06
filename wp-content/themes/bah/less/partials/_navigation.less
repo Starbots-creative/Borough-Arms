@@ -89,24 +89,31 @@
                 }
 
                 
-
-
-                
                 @media @breakpoint-large {
+
+                   
                         &:hover {
                             > .sub-menu {
                                 display: block;
                             }
 
                             :after  {
-                                content:'' !important;
+                                content:'\25bc';
                                 border:none !important;
                             }
                         }
 
                         :after  {
-                            content:'' !important;
+                            content: '\25bc';
                             border:none !important;
+                            position: absolute;
+                            right: 16px !important;
+                            left:auto  !important;
+                            top: 18px !important;
+                            bottom: auto !important;
+                            transform:none !important;
+                            width:auto !important;
+                            opacity:0.5;
                         }
                     }
             }
@@ -232,6 +239,11 @@
 
         &.toggle {
             display:block;
+        }
+
+        &:after {
+            content:'' !important;
+    
         }
 
         @media @breakpoint-small {

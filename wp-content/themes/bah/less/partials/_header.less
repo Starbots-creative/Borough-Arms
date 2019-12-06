@@ -130,9 +130,30 @@
              ul {
              border-bottom:none;
              @media @breakpoint-large {   
-             margin-top:-10px;
+             margin-top:-10px; 
+
+              li {
+                &.menu-item-has-children  {
+                 
+                  :after  {
+             
+                  
+                      top: 30px !important;
+               
+                  }
+              }
+
+              }
+                     
+       
+
+
              }
              @media @breakpoint-large {   
+
+              
+        
+
               a {
                     padding-top:30px;
                   }
