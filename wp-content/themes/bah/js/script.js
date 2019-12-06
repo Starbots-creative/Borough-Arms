@@ -60,8 +60,9 @@ $(document).ready(function() {
             }
         });
     }
-    setup_collapsible_submenus();
-      
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        setup_collapsible_submenus();
+    }
 
     $('.menutoggle').click(function(e) {
        

@@ -14114,7 +14114,9 @@ $(document).ready(function () {
             }
         });
     }
-    setup_collapsible_submenus();
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        setup_collapsible_submenus();
+    }
 
     $('.menutoggle').click(function (e) {
 
@@ -14201,14 +14203,6 @@ $(document).ready(function () {
             //jQuery('.wpmm-sticky').removeClass('wpmm-sticky-wrap');c
             $('.header-wrapper').removeClass('fixed');
         }
-
-        $(".accordions").accordion({
-
-            collapsible: true,
-            active: false
-        });
-
-        $(".accordions div").css({ 'height': 'auto' });
     });
 
     function counter(event) {
