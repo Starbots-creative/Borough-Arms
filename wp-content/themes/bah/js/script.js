@@ -33,9 +33,9 @@ $(document).ready(function() {
         var $menu = $('.main-menu'),
             top_level_link = '.main-menu .menu-item-has-children > a';
              
-        $menu.find('a').each(function() {
+          $menu.find('a').each(function() {
             $(this).off('click');
-              
+               
             if ( $(this).is(top_level_link) ) {
                
             }
@@ -59,9 +59,15 @@ $(document).ready(function() {
                 });
             }
         });
+
     }
-   
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         setup_collapsible_submenus();
+        
+    }
+
+
+       
 
     $('.menutoggle').click(function(e) {
        
