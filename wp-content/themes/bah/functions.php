@@ -257,7 +257,9 @@ function showSubSections($class='') { ?>
 
 <section class="articles <?=$class;?>">
 
-<?php while( have_rows('article') ): the_row();
+<?php 
+$target="";
+while( have_rows('article') ): the_row();
         $image = get_sub_field('image');?>
         <div class="article <?=strtolower(get_sub_field('color'));?>">
             <div class="image">
@@ -269,7 +271,12 @@ function showSubSections($class='') { ?>
                     <?=the_sub_field('content');?>
 
                     <?php if (get_sub_field('cta_url')): ?>
-                    <a href="<?=the_sub_field('cta_url');?>" class="button"><?=the_sub_field('cta_text');?></a>
+
+                           <?php if (strpos(get_sub_field('cta_url'),'pdf')):?>
+                                <?php $target="_blank";?>
+                           <?php endif;?>
+
+                    <a href="<?=the_sub_field('cta_url');?>" class="button" target="<?=$target;?>"><?=the_sub_field('cta_text');?></a>
                     <?php endif;?>
                 </div>
             </div>
@@ -335,7 +342,10 @@ $firstImage = $gallery[0]['sizes']['large'];?>
                 <div class="content">
                         <h2> <?=get_sub_field('heading');?></h3>
                         <?=get_sub_field('content');?>
-                        <a href="" class="button full">Book Online</a>
+
+                        <?php if (get_sub_field('cta_link')):?>
+                              <a href="<?=get_sub_field('cta_link');?>" target="_blank" class="button full"><?=get_sub_field('cta_text');?></a>
+                        <?php endif;?>
                 </div>
                 
                 <ul class="gallery-children">
@@ -413,7 +423,7 @@ function specialOffers() {
 
 
 function showAccordion() { ?>
-
+ 
 <section class="accordion">
 
         <div class="body">
