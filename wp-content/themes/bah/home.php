@@ -61,8 +61,6 @@ if(have_rows('module_builder')):
     endwhile;
     endif;
 ?>
-
-
 <?php 
 
 get_footer(); ?>
