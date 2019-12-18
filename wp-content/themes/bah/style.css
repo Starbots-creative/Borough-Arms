@@ -2809,7 +2809,7 @@ a {
 .open .accordionItemHeading {
   background: #caa1a6;
 }
-.strong {
+8982 .strong {
   font-weight: 700;
 }
 .pink h2 {
@@ -2887,6 +2887,10 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+.TA_cdsratingsonlynarrow {
+  width: 136px;
+  margin: 0 auto;
 }
 .slider-wrapper .main-slider .slide {
   height: 100vh;
