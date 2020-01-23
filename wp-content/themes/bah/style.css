@@ -2317,15 +2317,19 @@ a {
 }
 /*hero & events*/
 .hero {
-  height: 100vh;
-  -webkit-background-size: cover;
-          background-size: cover;
-  background-repeat: no-repeat fixed;
-  background-position: 50% 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 100vh;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat fixed;
+    background-position: 50% 50%;
+  }
 }
 .hero .content {
   text-align: center;
@@ -2337,7 +2341,11 @@ a {
           box-sizing: border-box;
   background: rgba(255, 255, 255, 0.9);
   padding: 50px;
-  height: 100vh;
+}
+@media only screen and (min-width: 768px) {
+  .hero .content {
+    height: 100vh;
+  }
 }
 @media only screen and (min-width: 992px) {
   .hero .content {

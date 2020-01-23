@@ -95,18 +95,23 @@
 
 /*hero & events*/
 .hero {
+    @media @breakpoint-medium {  
     height:100vh;
     background-size:cover;
     background-repeat: no-repeat fixed;
     background-position: 50% 50%;
-
+    }
     display:flex;
     .content {
         text-align:center;
         .wrapper();
          background:rgba(255,255,255,0.9);
          padding:50px;
+
+         @media @breakpoint-medium {  
          height:100vh;
+         }
+         
          @media @breakpoint-large {  
             height:auto;
          }
